@@ -340,7 +340,7 @@ class SamAdapterFunctionsScope(
                 val visibility = syntheticVisibility(sourceFunction, isUsedForExtension = false)
 
                 descriptor.initialize(
-                    null, ownerClass.thisAsReceiverParameter, typeParameters, valueParameters, returnType,
+                    null, ownerClass.thisAsReceiverParameter, emptyList(), typeParameters, valueParameters, returnType,
                     Modality.FINAL, visibility
                 )
 

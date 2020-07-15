@@ -80,7 +80,8 @@ private fun CirProperty.buildDescriptor(
         returnType.buildType(targetComponents, typeParameterResolver),
         typeParameters,
         buildDispatchReceiver(propertyDescriptor),
-        extensionReceiver?.buildExtensionReceiver(targetComponents, typeParameterResolver, propertyDescriptor)
+        extensionReceiver?.buildExtensionReceiver(targetComponents, typeParameterResolver, propertyDescriptor),
+        emptyList()
     )
 
     val getterDescriptor = getter?.let { getter ->

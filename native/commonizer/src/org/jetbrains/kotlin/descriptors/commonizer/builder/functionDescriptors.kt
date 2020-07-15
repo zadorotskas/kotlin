@@ -73,6 +73,7 @@ private fun CirFunction.buildDescriptor(
     functionDescriptor.initialize(
         extensionReceiver?.buildExtensionReceiver(targetComponents, typeParameterResolver, functionDescriptor),
         buildDispatchReceiver(functionDescriptor),
+        emptyList(),
         typeParameters,
         valueParameters.buildDescriptors(targetComponents, typeParameterResolver, functionDescriptor),
         returnType.buildType(targetComponents, typeParameterResolver),
