@@ -33,7 +33,7 @@ open class CompileToBitcode @Inject constructor(
     val linkerArgs = mutableListOf<String>()
     var excludeFiles: List<String> = listOf(
             "**/*Test.cpp",
-            "**/*Test.mm",
+            "**/*Test.mm"
     )
     var includeFiles: List<String> = listOf(
             "**/*.cpp",
@@ -101,8 +101,8 @@ open class CompileToBitcode @Inject constructor(
         get() {
             return srcDirs.flatMap { srcDir ->
                 project.fileTree(srcDir) {
-                    it.include(includeFiles)
-                    it.exclude(excludeFiles)
+                    include(includeFiles)
+                    exclude(excludeFiles)
                 }.files
             }
         }
@@ -141,7 +141,7 @@ open class CompileToBitcode @Inject constructor(
                         Language.C -> arrayOf("**/.h")
                         Language.CPP -> arrayOf("**/*.h", "**/*.hpp")
                     }
-                    it.include(*includePatterns)
+                    include(*includePatterns)
                 }.files
             }
         }
@@ -156,18 +156,18 @@ open class CompileToBitcode @Inject constructor(
         val plugin = project.convention.getPlugin(ExecClang::class.java)
 
         plugin.execKonanClang(target) {
-            it.workingDir = objDir
-            it.executable = executable
-            it.args = compilerFlags + inputFiles.map { it.absolutePath }
+            workingDir = objDir
+            executable = executable
+            args = compilerFlags + inputFiles.map { it.absolutePath }
         }
 
         project.exec {
             val llvmDir = project.findProperty("llvmDir")
-            it.executable = "$llvmDir/bin/llvm-link"
-            it.args = listOf("-o", outFile.absolutePath) + linkerArgs +
-                    inputFiles.map {
-                        bitcodeFileForInputFile(it).absolutePath
-                    }
+            executable = "$llvmDir/bin/llvm-link"
+            args = listOf("-o", outFile.absolutePath) + linkerArgs +
+                    project.fileTree(objDir) {
+                        include("**/*.bc")
+                    }.files.map { it.absolutePath }
         }
     }
 }
