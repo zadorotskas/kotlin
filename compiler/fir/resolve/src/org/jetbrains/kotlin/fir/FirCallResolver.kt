@@ -135,6 +135,7 @@ class FirCallResolver(
         val typeArguments = (qualifiedAccess as? FirFunctionCall)?.typeArguments.orEmpty()
 
         val info = CallInfo(
+            qualifiedAccess,
             if (qualifiedAccess is FirFunctionCall) CallKind.Function else CallKind.VariableAccess,
             name,
             explicitReceiver,
@@ -299,6 +300,7 @@ class FirCallResolver(
                 }
 
         val callInfo = CallInfo(
+            delegatedConstructorCall,
             CallKind.DelegatingConstructorCall,
             name,
             explicitReceiver = null,
@@ -347,6 +349,7 @@ class FirCallResolver(
         annotationCall.argumentList.transformArguments(transformer, ResolutionMode.ContextDependent)
 
         val callInfo = CallInfo(
+            annotationCall,
             CallKind.Function,
             name = reference.name,
             explicitReceiver = null,
@@ -457,6 +460,7 @@ class FirCallResolver(
         outerConstraintSystemBuilder: ConstraintSystemBuilder?,
     ): CallInfo {
         return CallInfo(
+            callableReferenceAccess,
             CallKind.CallableReference,
             callableReferenceAccess.calleeReference.name,
             callableReferenceAccess.explicitReceiver,
