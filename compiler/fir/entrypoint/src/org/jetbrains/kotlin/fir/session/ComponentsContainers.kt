@@ -5,10 +5,10 @@
 
 package org.jetbrains.kotlin.fir.session
 
+import com.intellij.psi.PsiFile
 import org.jetbrains.kotlin.config.LanguageVersionSettings
 import org.jetbrains.kotlin.fir.*
 import org.jetbrains.kotlin.fir.analysis.CheckersComponent
-import org.jetbrains.kotlin.fir.analysis.LookupTrackerComponent
 import org.jetbrains.kotlin.fir.extensions.FirExtensionService
 import org.jetbrains.kotlin.fir.extensions.FirPredicateBasedProvider
 import org.jetbrains.kotlin.fir.extensions.FirRegisteredPluginAnnotations
@@ -53,7 +53,13 @@ fun FirSession.registerResolveComponents(lookupTracker: LookupTracker? = null) {
     register(FirTypeResolver::class, FirTypeResolverImpl(this))
     register(CheckersComponent::class, CheckersComponent())
     if (lookupTracker != null) {
-        register(LookupTrackerComponent::class, LookupTrackerComponent(lookupTracker))
+        register(
+            FirLookupTrackerComponent::class,
+            IncrementalCompilationLookupTrackerComponent(lookupTracker) {
+                val psiSource = (it as? FirPsiSourceElement<*>) ?: TODO("Not implemented for non-FirPsiSourceElement")
+                ((psiSource.psi as? PsiFile) ?: psiSource.psi.containingFile).virtualFile.path
+            }
+        )
     }
 }
 
