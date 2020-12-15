@@ -42,7 +42,7 @@ abstract class TowerScopeLevel {
 
     abstract fun processPropertiesByName(info: CallInfo, processor: TowerScopeLevelProcessor<FirVariableSymbol<*>>): ProcessorAction
 
-    abstract fun processObjectsByName(name: Name, processor: TowerScopeLevelProcessor<AbstractFirBasedSymbol<*>>): ProcessorAction
+    abstract fun processObjectsByName(info: CallInfo, processor: TowerScopeLevelProcessor<AbstractFirBasedSymbol<*>>): ProcessorAction
 
     interface TowerScopeLevelProcessor<in T : AbstractFirBasedSymbol<*>> {
         fun consumeCandidate(
@@ -133,7 +133,7 @@ class MemberScopeTowerLevel(
         return processMembers(processor) { consumer ->
             session.firLookupTracker?.recordLookup(info, dispatchReceiverValue.type)
             this.processFunctionsAndConstructorsByName(
-                info, session, bodyResolveComponents,
+                info.name, session, bodyResolveComponents,
                 includeInnerConstructors = true,
                 processor = {
                     // WARNING, DO NOT CAST FUNCTIONAL TYPE ITSELF
@@ -150,7 +150,7 @@ class MemberScopeTowerLevel(
     ): ProcessorAction {
         return processMembers(processor) { consumer ->
             session.firLookupTracker?.recordLookup(info, dispatchReceiverValue.type)
-            this.processPropertiesByName(info) {
+            this.processPropertiesByName(info.name) {
                 // WARNING, DO NOT CAST FUNCTIONAL TYPE ITSELF
                 @Suppress("UNCHECKED_CAST")
                 consumer(it)
