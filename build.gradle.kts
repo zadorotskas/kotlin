@@ -460,8 +460,8 @@ allprojects {
         kotlinOptions {
             freeCompilerArgs = commonCompilerArgs + jvmCompilerArgs
 
-            if (useJvmIrBackend) {
-                useIR = true
+            if (!useJvmIrBackend) {
+                useOldBackend = true
             }
 
             if (useJvmFir) {
