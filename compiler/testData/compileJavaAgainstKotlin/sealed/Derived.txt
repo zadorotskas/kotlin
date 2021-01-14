@@ -1,0 +1,17 @@
+package test
+
+public open class Derived : test.Season {
+    public constructor Derived()
+}
+
+public sealed class Season {
+    internal constructor Season()
+
+    public final class Cold : test.Season {
+        public constructor Cold()
+    }
+
+    public final class Warm : test.Season {
+        public constructor Warm()
+    }
+}

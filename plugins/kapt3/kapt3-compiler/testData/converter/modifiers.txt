@@ -165,7 +165,7 @@ import java.lang.System;
 @kotlin.Metadata()
 public abstract class SealedClass {
 
-    private SealedClass() {
+    public SealedClass() {
         super();
     }
 
