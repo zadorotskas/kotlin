@@ -16,7 +16,7 @@ import org.jetbrains.kotlin.fir.builder.AbstractRawFirBuilderTestCase
 import org.jetbrains.kotlin.fir.builder.RawFirBuilderMode
 import org.jetbrains.kotlin.fir.builder.StubFirScopeProvider
 import org.jetbrains.kotlin.fir.lightTree.LightTree2Fir
-import org.jetbrains.kotlin.fir.lightTree.walkTopDown
+import org.jetbrains.kotlin.fir.lightTree.walkKtFiles
 import org.jetbrains.kotlin.fir.lightTree.walkTopDownWithTestData
 import org.jetbrains.kotlin.fir.session.FirSessionFactory
 import org.jetbrains.kotlin.psi.*
@@ -43,7 +43,7 @@ class TreesCompareTest : AbstractRawFirBuilderTestCase() {
         }
         println("BASE PATH: $path")
         if (!withTestData) {
-            path.walkTopDown(onEachFile)
+            path.walkKtFiles(onEachFile)
         } else {
             path.walkTopDownWithTestData(onEachFile)
         }

@@ -8,7 +8,7 @@ package org.jetbrains.kotlin.fir.lightTree.benchmark
 import com.intellij.openapi.util.io.FileUtil
 import com.intellij.openapi.vfs.CharsetToolkit
 import org.jetbrains.kotlin.fir.lightTree.benchmark.generators.TreeGenerator
-import org.jetbrains.kotlin.fir.lightTree.walkTopDown
+import org.jetbrains.kotlin.fir.lightTree.walkKtFiles
 import org.jetbrains.kotlin.fir.lightTree.walkTopDownWithTestData
 import org.openjdk.jmh.annotations.*
 import java.io.File
@@ -41,7 +41,7 @@ abstract class AbstractBenchmark {
             files[file] = text
         }
         if (ignoreTestData) {
-            path.walkTopDown(saveText)
+            path.walkKtFiles(saveText)
         } else {
             path.walkTopDownWithTestData(saveText)
         }

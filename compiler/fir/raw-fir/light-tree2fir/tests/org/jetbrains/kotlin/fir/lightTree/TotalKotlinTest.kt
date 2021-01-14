@@ -18,7 +18,6 @@ import org.jetbrains.kotlin.fir.session.FirSessionFactory
 import org.jetbrains.kotlin.psi.KtFile
 import org.jetbrains.kotlin.test.JUnit3RunnerWithInners
 import org.junit.runner.RunWith
-import java.io.File
 import kotlin.system.measureNanoTime
 
 @TestDataPath("/")
@@ -57,7 +56,7 @@ class TotalKotlinTest : AbstractRawFirBuilderTestCase() {
 
         if (onlyLightTree) println("LightTree generation") else println("Fir from LightTree converter")
         println("BASE PATH: $path")
-        path.walkTopDown {
+        path.walkKtFiles {
             val text = FileUtil.loadFile(it, CharsetToolkit.UTF8, true).trim()
             time += measureNanoTime {
                 generateFirFromLightTree(onlyLightTree, lightTreeConverter, text, it.name)
@@ -72,17 +71,12 @@ class TotalKotlinTest : AbstractRawFirBuilderTestCase() {
 
     private fun totalKotlinPsi(onlyPsi: Boolean) {
         val path = System.getProperty("user.dir")
-        val root = File(path)
         var counter = 0
         var time = 0L
 
         if (onlyPsi) println("Psi generation") else println("Fir from Psi converter")
         println("BASE PATH: $path")
-        for (file in root.walkTopDown()) {
-            if (file.isDirectory) continue
-            if (file.path.contains("testData") || file.path.contains("resources")) continue
-            if (file.extension != "kt") continue
-
+        path.walkKtFiles { file ->
             val text = FileUtil.loadFile(file, CharsetToolkit.UTF8, true).trim()
             time += measureNanoTime {
                 generateFirFromPsi(onlyPsi, text, file.path)
