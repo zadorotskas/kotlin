@@ -27,8 +27,7 @@ public final class Sealed$Inner {
 public abstract class Sealed {
     // source: 'annotationsOnHiddenConstructor.kt'
     private final field z: int
-    private @Ann method <init>(@Ann p0: int): void
-    public synthetic method <init>(p0: int, p1: kotlin.jvm.internal.DefaultConstructorMarker): void
+    public @Ann method <init>(@Ann p0: int): void
     public final method getZ-a_XrcN0(): int
     public final inner class Sealed$Derived
     public final inner class Sealed$Inner

@@ -70,8 +70,7 @@ public final class TestSealed$Case {
 public abstract class TestSealed {
     // source: 'inlineClassTypeParametersInConstructor.kt'
     private final field z: int
-    private method <init>(p0: int): void
-    public synthetic method <init>(p0: int, p1: kotlin.jvm.internal.DefaultConstructorMarker): void
+    public method <init>(p0: int): void
     public final method getZ-a_XrcN0(): int
     public final inner class TestSealed$Case
 }

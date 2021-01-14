@@ -1,6 +1,6 @@
 package test;
 
-// It's not possible to inherit from Season (it's sealed in Kotlin)
+// It's possible to extend kotlin sealed class in java < 16
 public class Derived extends Season {
 
 }
