@@ -310,7 +310,7 @@ internal class UltraLightMembersCreator(
         }
 
         private fun KtDeclaration.isPrivate() =
-            hasModifier(PRIVATE_KEYWORD) || this is KtConstructor<*> && containingClassIsSealed || isInlineOnly()
+            hasModifier(PRIVATE_KEYWORD) || isInlineOnly()
 
         private fun KtDeclaration.isInlineOnly(): Boolean {
             if (this !is KtCallableDeclaration || !hasModifier(INLINE_KEYWORD)) return false
