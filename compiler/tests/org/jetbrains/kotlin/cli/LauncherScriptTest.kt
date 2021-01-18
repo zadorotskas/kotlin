@@ -338,9 +338,15 @@ fun f() : Result<Int> = Result.success(42)
     }
 
     fun testKotlincJdk15() {
+        val jdk15 = mapOf("JAVA_HOME" to KtTestUtil.getJdk15Home().absolutePath)
         runProcess(
             "kotlinc", "$testDataDirectory/helloWorld.kt", "-d", tmpdir.path,
-            environment = mapOf("JAVA_HOME" to KtTestUtil.getJdk15Home().absolutePath),
+            environment = jdk15,
+        )
+
+        runProcess(
+            "kotlin", "-e", "listOf(\"OK\")",
+            expectedStdout = "[OK]\n", environment = jdk15,
         )
     }
 }
