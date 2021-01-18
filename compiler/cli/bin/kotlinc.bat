@@ -86,8 +86,8 @@ rem Needs to be executed in the EnableDelayedExpansion mode.
   rem Parse output and take the third token from the string containing " version ".
   rem It should be something like "1.8.0_275" or "15.0.1".
   for /f "tokens=3" %%i in ('java -version 2^>^&1 ^| findstr /i " version "') do (
-    rem Split the string by "." and take the first token.
-    for /f "delims=. tokens=1" %%j in ("%%i") do (
+    rem Split the string by "-" or "." and take the first token.
+    for /f "delims=-. tokens=1" %%j in ("%%i") do (
       rem At this point, _version should be something like "1 or "15. Note the leading quote.
       set _version=%%j
     )

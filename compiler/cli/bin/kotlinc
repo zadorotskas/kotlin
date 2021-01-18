@@ -24,7 +24,7 @@ findKotlinHome() {
 findJavaVersion() {
     # Note that this only loads the first component of the version, so "1.8.0_265" -> "1".
     # But it's fine because major version is 9 for JDK 9, and so on.
-    regex='^.*version "([[:digit:]]+)\..*$'
+    regex='^.*version "([[:digit:]]+).*$'
     while read -r line; do
         if [[ "$line" =~ $regex ]]; then
             echo ${BASH_REMATCH[1]}
