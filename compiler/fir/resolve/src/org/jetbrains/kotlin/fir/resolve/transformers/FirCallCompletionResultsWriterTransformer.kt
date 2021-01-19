@@ -631,6 +631,7 @@ class FirCallCompletionResultsWriterTransformer(
         buildErrorNamedReference {
             source = this@toResolvedReference.source
             diagnostic = this@toResolvedReference.diagnostic
+            candidateSymbol = this@toResolvedReference.candidateSymbol
         }
     } else {
         buildResolvedNamedReference {
