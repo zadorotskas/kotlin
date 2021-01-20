@@ -22,7 +22,6 @@ import org.jetbrains.kotlin.resolve.BindingContext
 import org.jetbrains.kotlin.resolve.BindingTrace
 import org.jetbrains.kotlin.util.slicedMap.ReadOnlySlice
 import org.jetbrains.kotlin.util.slicedMap.WritableSlice
-import org.jetbrains.kotlin.resolve.TraceEntryFilter
 import org.jetbrains.kotlin.resolve.diagnostics.Diagnostics
 import com.intellij.util.containers.ContainerUtil
 import org.jetbrains.kotlin.psi.KtExpression
@@ -81,6 +80,10 @@ class LockBasedLazyResolveStorageManager(private val storageManager: StorageMana
 
         override fun report(diagnostic: Diagnostic) {
             storageManager.compute { trace.report(diagnostic) }
+        }
+
+        override fun withSuppressedOnFlyDiagnosticReport(runnable: Runnable) {
+            storageManager.compute { trace.withSuppressedOnFlyDiagnosticReport(runnable) }
         }
 
         override fun wantsDiagnostics() = trace.wantsDiagnostics()

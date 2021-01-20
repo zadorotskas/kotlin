@@ -31,6 +31,7 @@ class MutableDiagnosticsWithSuppression(
 ) : Diagnostics {
     private val diagnosticList = ArrayList<Diagnostic>()
     private var diagnosticsCallback: DiagnosticSink.DiagnosticsCallback? = null
+    private var suppressOnFlyDiagnosticReport: Boolean = false
 
     //NOTE: CachedValuesManager is not used because it requires Project passed to this object
     private val cache = CachedValueImpl {
@@ -57,6 +58,16 @@ class MutableDiagnosticsWithSuppression(
         delegateDiagnostics.resetCallback()
     }
 
+    fun withSuppressedOnFlyDiagnosticReport(runnable: Runnable) {
+        val originalSuppressOnFlyDiagnosticReport = suppressOnFlyDiagnosticReport
+        suppressOnFlyDiagnosticReport = true
+        try {
+            runnable.run()
+        } finally {
+            suppressOnFlyDiagnosticReport = originalSuppressOnFlyDiagnosticReport
+        }
+    }
+
     //essential that this list is readonly
     fun getOwnDiagnostics(): List<Diagnostic> {
         return diagnosticList
@@ -66,7 +77,7 @@ class MutableDiagnosticsWithSuppression(
         diagnosticsCallback?.let { callback ->
             // TODO: it is known that on diagnostic callback REDECLARATION could run into a recursion
             //   so, it is worth to ignore only them from on-fly reporting
-            if (diagnostic.factory != Errors.REDECLARATION && this.suppressCache.filter.invoke(diagnostic)) {
+            if (!suppressOnFlyDiagnosticReport && diagnostic.factory != Errors.REDECLARATION && this.suppressCache.filter.invoke(diagnostic)) {
                 callback.callback(diagnostic)
             }
         }

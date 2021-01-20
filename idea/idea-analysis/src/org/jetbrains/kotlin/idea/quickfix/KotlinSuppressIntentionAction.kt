@@ -38,6 +38,10 @@ class KotlinSuppressIntentionAction private constructor(
     val pointer = suppressAt.createSmartPointer()
     val project = suppressAt.project
 
+    init {
+        println("")
+    }
+
     constructor(
         suppressAt: KtExpression,
         suppressKey: String,

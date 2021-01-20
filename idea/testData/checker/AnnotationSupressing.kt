@@ -1,10 +1,10 @@
 annotation class A(val i: Int)
 annotation class Z(val i: Int)
 
-@Z(<error descr="[TYPE_MISMATCH] Type mismatch: inferred type is String but Int was expected">"BAD"</error>) @Suppress("TYPE_MISMATCH")
+@Z("BAD") @Suppress("TYPE_MISMATCH")
 fun some0() {}
 
-@Z(<error descr="[TYPE_MISMATCH] Type mismatch: inferred type is String but Int was expected">"BAD"</error>) <error descr="[REPEATED_ANNOTATION] This annotation is not repeatable">@Z(<error descr="[TYPE_MISMATCH] Type mismatch: inferred type is String but Int was expected">"BAD"</error>)</error> @Suppress("TYPE_MISMATCH")
+@Z("BAD") <error descr="[REPEATED_ANNOTATION] This annotation is not repeatable">@Z("BAD")</error> @Suppress("TYPE_MISMATCH")
 fun some01() {}
 
 @Suppress("TYPE_MISMATCH") @Z("BAD")
@@ -15,7 +15,7 @@ fun some1() {
 fun some11() {
 }
 
-@A(<error descr="[TYPE_MISMATCH] Type mismatch: inferred type is String but Int was expected">"BAD"</error>) @Suppress("TYPE_MISMATCH")
+@A("BAD") @Suppress("TYPE_MISMATCH")
 fun some2() {
 }
 

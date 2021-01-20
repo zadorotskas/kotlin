@@ -63,5 +63,9 @@ public interface DiagnosticSink {
 
     default void resetCallback() { }
 
+    default void withSuppressedOnFlyDiagnosticReport(@NotNull Runnable runnable) {
+        runnable.run();
+    }
+
     boolean wantsDiagnostics();
 }

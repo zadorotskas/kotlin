@@ -121,8 +121,10 @@ class LazyAnnotationDescriptor(
     }
 
     override fun forceResolveAllContents() {
-        ForceResolveUtil.forceResolveAllContents(type)
-        allValueArguments
+        c.trace.withSuppressedOnFlyDiagnosticReport {
+            ForceResolveUtil.forceResolveAllContents(type)
+            allValueArguments
+        }
     }
 
     private class FileDescriptorForVisibilityChecks(

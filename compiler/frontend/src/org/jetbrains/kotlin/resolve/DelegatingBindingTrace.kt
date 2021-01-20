@@ -169,6 +169,14 @@ open class DelegatingBindingTrace(
         mutableDiagnostics?.resetCallback()
     }
 
+    override fun withSuppressedOnFlyDiagnosticReport(runnable: Runnable) {
+        if (mutableDiagnostics != null) {
+            mutableDiagnostics.withSuppressedOnFlyDiagnosticReport(runnable)
+        } else {
+            super.withSuppressedOnFlyDiagnosticReport(runnable)
+        }
+    }
+
     override fun wantsDiagnostics(): Boolean = mutableDiagnostics != null
 
     override fun toString(): String = name
