@@ -9,6 +9,7 @@ import org.jetbrains.kotlin.codegen.ExpressionCodegen
 import org.jetbrains.kotlin.codegen.FunctionGenerationStrategy.CodegenBased
 import org.jetbrains.kotlin.codegen.ImplementationBodyCodegen
 import org.jetbrains.kotlin.codegen.extensions.ExpressionCodegenExtension
+import org.jetbrains.kotlin.config.LanguageFeature
 import org.jetbrains.kotlin.descriptors.*
 import org.jetbrains.kotlin.descriptors.annotations.Annotations
 import org.jetbrains.kotlin.descriptors.impl.ClassConstructorDescriptorImpl
@@ -49,7 +50,10 @@ abstract class AbstractNoArgExpressionCodegenExtension(val invokeInitializers: B
         // If a parent sealed class has not a zero-parameter constructor, user must write @NoArg annotation for the parent class as well,
         // and then we generate <init>()V
         val isParentASealedClassWithDefaultConstructor =
-            superClass.modality == Modality.SEALED && superClass.constructors.any { isZeroParameterConstructor(it) }
+            superClass.modality == Modality.SEALED &&
+                    superClass.constructors.any { isZeroParameterConstructor(it) } &&
+                    !state.languageVersionSettings.supportsFeature(LanguageFeature.AllowSealedInheritorsInDifferentFilesOfSamePackage)
+
 
         functionCodegen.generateMethod(JvmDeclarationOrigin.NO_ORIGIN, constructorDescriptor, object : CodegenBased(state) {
             override fun doGenerateBody(codegen: ExpressionCodegen, signature: JvmMethodSignature) {
