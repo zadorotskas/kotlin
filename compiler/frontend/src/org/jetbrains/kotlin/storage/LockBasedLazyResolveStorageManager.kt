@@ -82,10 +82,6 @@ class LockBasedLazyResolveStorageManager(private val storageManager: StorageMana
             storageManager.compute { trace.report(diagnostic) }
         }
 
-        override fun withSuppressedOnFlyDiagnosticReport(runnable: Runnable) {
-            storageManager.compute { trace.withSuppressedOnFlyDiagnosticReport(runnable) }
-        }
-
         override fun wantsDiagnostics() = trace.wantsDiagnostics()
 
         override fun toString(): String {

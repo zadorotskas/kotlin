@@ -24,6 +24,8 @@ import org.jetbrains.annotations.TestOnly
 import org.jetbrains.kotlin.diagnostics.Diagnostic
 import org.jetbrains.kotlin.diagnostics.DiagnosticSink
 import org.jetbrains.kotlin.diagnostics.Errors
+import org.jetbrains.kotlin.psi.KtAnnotationEntry
+import org.jetbrains.kotlin.psi.KtStubbedPsiUtil
 
 class MutableDiagnosticsWithSuppression(
     private val suppressCache: KotlinSuppressCache,
@@ -31,7 +33,6 @@ class MutableDiagnosticsWithSuppression(
 ) : Diagnostics {
     private val diagnosticList = ArrayList<Diagnostic>()
     private var diagnosticsCallback: DiagnosticSink.DiagnosticsCallback? = null
-    private var suppressOnFlyDiagnosticReport: Boolean = false
 
     //NOTE: CachedValuesManager is not used because it requires Project passed to this object
     private val cache = CachedValueImpl {
@@ -58,33 +59,29 @@ class MutableDiagnosticsWithSuppression(
         delegateDiagnostics.resetCallback()
     }
 
-    fun withSuppressedOnFlyDiagnosticReport(runnable: Runnable) {
-        val originalSuppressOnFlyDiagnosticReport = suppressOnFlyDiagnosticReport
-        suppressOnFlyDiagnosticReport = true
-        try {
-            runnable.run()
-        } finally {
-            suppressOnFlyDiagnosticReport = originalSuppressOnFlyDiagnosticReport
-        }
-    }
-
     //essential that this list is readonly
     fun getOwnDiagnostics(): List<Diagnostic> {
         return diagnosticList
     }
 
     fun report(diagnostic: Diagnostic) {
-        diagnosticsCallback?.let { callback ->
-            // TODO: it is known that on diagnostic callback REDECLARATION could run into a recursion
-            //   so, it is worth to ignore only them from on-fly reporting
-            if (!suppressOnFlyDiagnosticReport && diagnostic.factory != Errors.REDECLARATION && this.suppressCache.filter.invoke(diagnostic)) {
-                callback.callback(diagnostic)
-            }
-        }
+        onFlyDiagnosticsCallback(diagnostic)?.callback(diagnostic)
 
         diagnosticList.add(diagnostic)
         modificationTracker.incModificationCount()
     }
+
+    private fun onFlyDiagnosticsCallback(diagnostic: Diagnostic): DiagnosticSink.DiagnosticsCallback? =
+        if (diagnosticsCallback != null &&
+            // TODO: it is known that on diagnostic callback REDECLARATION could run into a recursion
+            //   so, it is worth to ignore only them from on-fly reporting
+            diagnostic.factory != Errors.REDECLARATION &&
+            // Do not try to report diagnostic on fly if it happened in annotations (due to a potential recursion via LazyAnnotations)
+            KtStubbedPsiUtil.getPsiOrStubParent(diagnostic.psiElement, KtAnnotationEntry::class.java, false) == null &&
+            suppressCache.filter.invoke(diagnostic)
+        ) {
+            diagnosticsCallback
+        } else null
 
     fun clear() {
         diagnosticList.clear()

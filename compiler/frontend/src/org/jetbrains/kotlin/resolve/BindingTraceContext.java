@@ -115,15 +115,6 @@ public class BindingTraceContext implements BindingTrace {
         mutableDiagnostics.report(diagnostic);
     }
 
-    @Override
-    public void withSuppressedOnFlyDiagnosticReport(@NotNull Runnable runnable) {
-        if (mutableDiagnostics != null) {
-            mutableDiagnostics.withSuppressedOnFlyDiagnosticReport(runnable);
-        } else {
-            runnable.run();
-        }
-    }
-
     public void clearDiagnostics() {
         if (mutableDiagnostics != null) {
             mutableDiagnostics.clear();
