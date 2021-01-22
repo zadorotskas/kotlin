@@ -263,10 +263,6 @@ fun generateJUnit3CompilerTests(args: Array<String>) {
                 )
             }
 
-            testClass<AbstractCompileKotlinAgainstKotlinTest> {
-                model("compileKotlinAgainstKotlin")
-            }
-
             testClass<AbstractCompileKotlinAgainstKotlinJdk15Test> {
                 model("compileKotlinAgainstKotlinJdk15")
             }
@@ -403,15 +399,12 @@ fun generateJUnit3CompilerTests(args: Array<String>) {
                 )
             }
 
-            testClass<AbstractIrCompileKotlinAgainstKotlinTest> {
-                model("compileKotlinAgainstKotlin", targetBackend = TargetBackend.JVM_IR)
-            }
             testClass<AbstractJvmIrAgainstOldBoxTest> {
-                model("compileKotlinAgainstKotlin", targetBackend = TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD)
+                model("codegen/box/compileKotlinAgainstKotlin", targetBackend = TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD)
             }
             testClass<AbstractJvmOldAgainstIrBoxTest> {
                 model(
-                    "compileKotlinAgainstKotlin",
+                    "codegen/box/compileKotlinAgainstKotlin",
                     targetBackend = TargetBackend.JVM_MULTI_MODULE_OLD_AGAINST_IR
                 )
             }
@@ -500,10 +493,6 @@ fun generateJUnit3CompilerTests(args: Array<String>) {
 
             testClass<AbstractFirBlackBoxAgainstJavaCodegenTest> {
                 model("codegen/boxAgainstJava", targetBackend = TargetBackend.JVM_IR, excludeDirs = listOf("oldLanguageVersions"))
-            }
-
-            testClass<AbstractFirCompileKotlinAgainstKotlinTest> {
-                model("compileKotlinAgainstKotlin", targetBackend = TargetBackend.JVM_IR)
             }
         }
 
