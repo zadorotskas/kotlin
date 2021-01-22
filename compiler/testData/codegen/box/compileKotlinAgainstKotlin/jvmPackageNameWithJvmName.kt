@@ -1,5 +1,7 @@
 // TARGET_BACKEND: JVM
 // MODULE: lib
+// WITH_STDLIB
+
 // FILE: A.kt
 
 @file:Suppress("INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")

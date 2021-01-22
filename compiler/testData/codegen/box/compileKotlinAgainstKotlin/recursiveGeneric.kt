@@ -1,4 +1,6 @@
 // TARGET_BACKEND: JVM
+// WITH_STDLIB
+// FULL_JDK
 // MODULE: lib
 // FILE: A.kt
 

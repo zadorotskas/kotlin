@@ -2,6 +2,8 @@
 // !USE_EXPERIMENTAL: kotlin.ExperimentalMultiplatform
 // TARGET_BACKEND: JVM
 // FULL_JDK
+// WITH_STDLIB
+
 // MODULE: lib
 // FILE: A.kt
 package a
