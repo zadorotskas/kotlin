@@ -1,8 +1,9 @@
 // !LANGUAGE: +InlineClasses
+// WITH_STDLIB
 
 // MODULE: lib
-// FILE: 1.kt
 // KOTLIN_CONFIGURATION_FLAGS: +JVM.USE_OLD_INLINE_CLASSES_MANGLING_SCHEME
+// FILE: 1.kt
 package test
 
 inline class IC(val s: String)
