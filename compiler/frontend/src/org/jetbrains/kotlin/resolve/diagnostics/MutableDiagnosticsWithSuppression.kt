@@ -23,7 +23,6 @@ import com.intellij.util.CachedValueImpl
 import org.jetbrains.annotations.TestOnly
 import org.jetbrains.kotlin.diagnostics.Diagnostic
 import org.jetbrains.kotlin.diagnostics.DiagnosticSink
-import org.jetbrains.kotlin.diagnostics.Errors
 import org.jetbrains.kotlin.psi.KtAnnotationEntry
 import org.jetbrains.kotlin.psi.KtStubbedPsiUtil
 
@@ -72,16 +71,13 @@ class MutableDiagnosticsWithSuppression(
     }
 
     private fun onFlyDiagnosticsCallback(diagnostic: Diagnostic): DiagnosticSink.DiagnosticsCallback? =
-        if (diagnosticsCallback != null &&
-            // TODO: it is known that on diagnostic callback REDECLARATION could run into a recursion
-            //   so, it is worth to ignore only them from on-fly reporting
-            diagnostic.factory != Errors.REDECLARATION &&
-            // Do not try to report diagnostic on fly if it happened in annotations (due to a potential recursion via LazyAnnotations)
-            KtStubbedPsiUtil.getPsiOrStubParent(diagnostic.psiElement, KtAnnotationEntry::class.java, false) == null &&
-            suppressCache.filter.invoke(diagnostic)
-        ) {
-            diagnosticsCallback
-        } else null
+        diagnosticsCallback.takeIf {
+            diagnosticsCallback != null &&
+                    // Due to a potential recursion in filter.invoke (via LazyAnnotations) do not try to report
+                    // diagnostic on fly if it happened in annotations
+                    KtStubbedPsiUtil.getPsiOrStubParent(diagnostic.psiElement, KtAnnotationEntry::class.java, false) == null &&
+                    suppressCache.filter.invoke(diagnostic)
+        }
 
     fun clear() {
         diagnosticList.clear()

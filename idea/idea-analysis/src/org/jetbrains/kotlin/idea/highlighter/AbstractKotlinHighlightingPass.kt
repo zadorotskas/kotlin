@@ -7,9 +7,9 @@ package org.jetbrains.kotlin.idea.highlighter
 
 import com.intellij.codeInsight.daemon.impl.Divider
 import com.intellij.codeInsight.intention.IntentionAction
+import com.intellij.lang.annotation.Annotation
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
-import com.intellij.lang.annotation.Annotation
 import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.editor.Document
 import com.intellij.openapi.util.Key
@@ -20,6 +20,7 @@ import org.jetbrains.kotlin.descriptors.DeclarationDescriptor
 import org.jetbrains.kotlin.diagnostics.Diagnostic
 import org.jetbrains.kotlin.diagnostics.DiagnosticFactory
 import org.jetbrains.kotlin.diagnostics.Errors
+import org.jetbrains.kotlin.diagnostics.rendering.RenderingContext
 import org.jetbrains.kotlin.idea.caches.resolve.analyzeWithAllCompilerChecks
 import org.jetbrains.kotlin.idea.quickfix.QuickFixes
 import org.jetbrains.kotlin.psi.KtFile
@@ -56,10 +57,18 @@ abstract class AbstractKotlinHighlightingPass(file: KtFile, document: Document) 
         // annotate diagnostics on fly: show diagnostics as soon as front-end reports them
         // don't create quick fixes as it could require some resolve
         val annotationByDiagnostic = mutableMapOf<Diagnostic, Annotation>()
+
+        // render of on-fly diagnostics with descriptors could lead to recursion
+        fun checkIfDescriptor(candidate: Any?): Boolean =
+            candidate is DeclarationDescriptor || candidate is Collection<*> && candidate.any(::checkIfDescriptor)
+
         val analysisResult =
             file.analyzeWithAllCompilerChecks({
                                                   val element = it.psiElement
-                                                  if (element in elements && it !in annotationByDiagnostic) {
+                                                  if (element in elements &&
+                                                      it !in annotationByDiagnostic &&
+                                                      !RenderingContext.parameters(it).any(::checkIfDescriptor)
+                                                  ) {
                                                       annotateDiagnostic(element, holder, it, annotationByDiagnostic)
                                                   }
                                               }).also { it.throwIfError() }
@@ -68,9 +77,13 @@ abstract class AbstractKotlinHighlightingPass(file: KtFile, document: Document) 
         val bindingContext = analysisResult.bindingContext
         // TODO: for some reasons it could be duplicated diagnostics for the same factory
         //  see [PsiCheckerTestGenerated$Checker.testRedeclaration]
-        val diagnostics = bindingContext.diagnostics.filter { it.psiElement in elements }.toSet()
+        val diagnostics = bindingContext.diagnostics.asSequence().filter { it.psiElement in elements }.toSet()
 
         if (diagnostics.isNotEmpty()) {
+            // annotate diagnostics those were not possible to render on fly
+            diagnostics.asSequence().filterNot { it in annotationByDiagnostic }.forEach {
+                annotateDiagnostic(it.psiElement, holder, it, annotationByDiagnostic)
+            }
             // apply quick fixes for all diagnostics grouping by element
             diagnostics.groupBy(Diagnostic::psiElement).forEach {
                 annotateQuickFixes(it.key, it.value, annotationByDiagnostic)
@@ -135,7 +148,7 @@ abstract class AbstractKotlinHighlightingPass(file: KtFile, document: Document) 
             TypeKindHighlightingVisitor(holder, bindingContext)
         )
 
-        private inline fun assertBelongsToTheSameElement(element: PsiElement, diagnostics: Collection<Diagnostic>) {
+        private fun assertBelongsToTheSameElement(element: PsiElement, diagnostics: Collection<Diagnostic>) {
             assert(diagnostics.all { it.psiElement == element })
         }
 
