@@ -56,4 +56,8 @@ object JvmEnvironmentConfigurationDirectives : SimpleDirectivesContainer() {
         description = "Configure jvm constructor call normalization mode",
         additionalParser = JVMConstructorCallNormalizationMode.Companion::fromStringOrNull
     )
+
+    val USE_OLD_INLINE_CLASSES_MANGLING_SCHEME by directive(
+        description = "Enable old mangling scheme for inline classes"
+    )
 }
