@@ -22,6 +22,7 @@ import org.jetbrains.kotlin.test.directives.JvmEnvironmentConfigurationDirective
 import org.jetbrains.kotlin.test.directives.JvmEnvironmentConfigurationDirectives.ASSERTIONS_MODE
 import org.jetbrains.kotlin.test.directives.JvmEnvironmentConfigurationDirectives.CONSTRUCTOR_CALL_NORMALIZATION_MODE
 import org.jetbrains.kotlin.test.directives.JvmEnvironmentConfigurationDirectives.STRING_CONCAT
+import org.jetbrains.kotlin.test.directives.JvmEnvironmentConfigurationDirectives.USE_OLD_INLINE_CLASSES_MANGLING_SCHEME
 import org.jetbrains.kotlin.test.directives.LanguageSettingsDirectives
 import org.jetbrains.kotlin.test.directives.model.DirectivesContainer
 import org.jetbrains.kotlin.test.directives.model.RegisteredDirectives
@@ -52,6 +53,7 @@ class JvmEnvironmentConfigurator(testServices: TestServices) : EnvironmentConfig
         register(STRING_CONCAT, JVMConfigurationKeys.STRING_CONCAT)
         register(ASSERTIONS_MODE, JVMConfigurationKeys.ASSERTIONS_MODE)
         register(CONSTRUCTOR_CALL_NORMALIZATION_MODE, JVMConfigurationKeys.CONSTRUCTOR_CALL_NORMALIZATION_MODE)
+        register(USE_OLD_INLINE_CLASSES_MANGLING_SCHEME, JVMConfigurationKeys.USE_OLD_INLINE_CLASSES_MANGLING_SCHEME)
     }
 
     override fun configureCompilerConfiguration(configuration: CompilerConfiguration, module: TestModule, project: MockProject) {
