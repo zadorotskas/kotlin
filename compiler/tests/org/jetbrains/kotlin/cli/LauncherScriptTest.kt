@@ -345,7 +345,7 @@ fun f() : Result<Int> = Result.success(42)
         )
 
         runProcess(
-            "kotlin", "-e", "listOf(\"OK\")",
+            "kotlin", "-e", "listOf('O'.toString() + 'K')",
             expectedStdout = "[OK]\n", environment = jdk15,
         )
     }
