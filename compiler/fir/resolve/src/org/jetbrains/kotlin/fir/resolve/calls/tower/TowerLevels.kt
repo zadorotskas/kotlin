@@ -22,11 +22,7 @@ import org.jetbrains.kotlin.fir.scopes.processClassifiersByName
 import org.jetbrains.kotlin.fir.symbols.AbstractFirBasedSymbol
 import org.jetbrains.kotlin.fir.symbols.impl.*
 import org.jetbrains.kotlin.fir.typeContext
-import org.jetbrains.kotlin.fir.types.ConeClassLikeType
-import org.jetbrains.kotlin.fir.types.ConeStarProjection
-import org.jetbrains.kotlin.fir.types.coneType
-import org.jetbrains.kotlin.fir.types.constructClassType
-import org.jetbrains.kotlin.name.Name
+import org.jetbrains.kotlin.fir.types.*
 import org.jetbrains.kotlin.types.AbstractTypeChecker
 import org.jetbrains.kotlin.util.OperatorNameConventions
 
@@ -131,7 +127,7 @@ class MemberScopeTowerLevel(
             return ProcessorAction.NEXT
         }
         return processMembers(processor) { consumer ->
-            session.firLookupTracker?.recordLookup(info, dispatchReceiverValue.type)
+            session.firLookupTracker?.recordLookup(info, dispatchReceiverValue.type.render())
             this.processFunctionsAndConstructorsByName(
                 info.name, session, bodyResolveComponents,
                 includeInnerConstructors = true,
@@ -149,7 +145,7 @@ class MemberScopeTowerLevel(
         processor: TowerScopeLevelProcessor<FirVariableSymbol<*>>
     ): ProcessorAction {
         return processMembers(processor) { consumer ->
-            session.firLookupTracker?.recordLookup(info, dispatchReceiverValue.type)
+            session.firLookupTracker?.recordLookup(info, dispatchReceiverValue.type.render())
             this.processPropertiesByName(info.name) {
                 // WARNING, DO NOT CAST FUNCTIONAL TYPE ITSELF
                 @Suppress("UNCHECKED_CAST")
@@ -267,7 +263,7 @@ class ScopeTowerLevel(
         processor: TowerScopeLevelProcessor<FirFunctionSymbol<*>>
     ): ProcessorAction {
         var empty = true
-        session.firLookupTracker?.recordLookupIfNeeded(info, scope, false)
+        session.firLookupTracker?.recordLookup(info, scope)
         scope.processFunctionsAndConstructorsByName(
             info.name,
             session,
@@ -285,7 +281,7 @@ class ScopeTowerLevel(
         processor: TowerScopeLevelProcessor<FirVariableSymbol<*>>
     ): ProcessorAction {
         var empty = true
-        session.firLookupTracker?.recordLookupIfNeeded(info, scope, false)
+        session.firLookupTracker?.recordLookup(info, scope)
         scope.processPropertiesByName(info.name) { candidate ->
             empty = false
             consumeCallableCandidate(candidate, processor)
@@ -298,7 +294,7 @@ class ScopeTowerLevel(
         processor: TowerScopeLevelProcessor<AbstractFirBasedSymbol<*>>
     ): ProcessorAction {
         var empty = true
-        session.firLookupTracker?.recordLookupIfNeeded(info, scope, false)
+        session.firLookupTracker?.recordLookup(info, scope)
         scope.processClassifiersByName(info.name) {
             empty = false
             processor.consumeCandidate(
