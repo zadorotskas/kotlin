@@ -1,7 +1,7 @@
+// SKIP_INLINE_CHECK_IN: lParams$default
 // IGNORE_BACKEND: JS
 
 // FILE: 1.kt
-// SKIP_INLINE_CHECK_IN: lParams$default
 
 package test
 //A lot of blank lines [Don't delete]
@@ -44,7 +44,7 @@ fun box(): String {
     return lParams()
 }
 
-// FILE: 1.smap
+// SMAP_FILE: 1.smap
 SMAP
 1.kt
 Kotlin
@@ -91,7 +91,7 @@ test/_1Kt$kValue$1
 1#1,40:1
 *E
 
-// FILE: 2.smap-nonseparate-compilation
+// SMAP_FILE: 2.smap-nonseparate-compilation
 
 SMAP
 2.kt
@@ -120,7 +120,7 @@ _2Kt
 5#1:14
 *E
 
-// FILE: 2.smap-separate-compilation
+// SMAP_FILE: 2.smap-separate-compilation
 
 SMAP
 2.kt
