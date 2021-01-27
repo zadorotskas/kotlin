@@ -59,8 +59,6 @@ class JavaSymbolProvider(
     private val scopeProvider = JavaScopeProvider(::wrapScopeWithJvmMapped, this)
 
     private val facade: KotlinJavaPsiFacade get() = KotlinJavaPsiFacade.getInstance(project)
-    private val parentClassTypeParameterStackCache: SymbolProviderCache<FirRegularClassSymbol, JavaTypeParameterStack> =
-        SymbolProviderCache()
 
     private fun findClass(
         classId: ClassId,
@@ -180,8 +178,7 @@ class JavaSymbolProvider(
             getClassLikeSymbolByFqName(outerClassId)
         } else null
         if (parentClassSymbol != null) {
-            val parentStack = parentClassTypeParameterStackCache[parentClassSymbol]
-                ?: (parentClassSymbol.fir as? FirJavaClass)?.javaTypeParameterStack
+            val parentStack = (parentClassSymbol.fir as? FirJavaClass)?.javaTypeParameterStack
             if (parentStack != null) {
                 javaTypeParameterStack.addStack(parentStack)
             }
@@ -197,7 +194,6 @@ class JavaSymbolProvider(
             this.isTopLevel = outerClassId == null
             isStatic = javaClass.isStatic
             this.javaTypeParameterStack = javaTypeParameterStack
-            parentClassTypeParameterStackCache[classSymbol] = javaTypeParameterStack
             existingNestedClassifierNames += javaClass.innerClassNames
             scopeProvider = this@JavaSymbolProvider.scopeProvider
             val classTypeParameters = javaClass.typeParameters.convertTypeParameters(javaTypeParameterStack)
@@ -278,7 +274,6 @@ class JavaSymbolProvider(
                 declarations +=
                     buildConstructorForAnnotationClass(constructorId, this, valueParametersForAnnotationConstructor)
             }
-            parentClassTypeParameterStackCache.remove(classSymbol)
         }
         firJavaClass.replaceSuperTypeRefs(
             javaClass.supertypes.map { supertype ->
