@@ -82,6 +82,9 @@ val Project.testOutputFramework
 val Project.testOutputExternal
     get() = (findProperty("testOutputExternal") as File).toString()
 
+val Project.cacheRedirectorEnabled
+    get() = findProperty("cacheRedirectorEnabled")?.toString()?.toBoolean() ?: false
+
 val validPropertiesNames = listOf("kotlin.native.home",
                                   "org.jetbrains.kotlin.native.home",
                                   "konan.home")
