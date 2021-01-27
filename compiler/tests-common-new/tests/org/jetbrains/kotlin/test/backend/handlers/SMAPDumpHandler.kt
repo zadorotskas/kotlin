@@ -6,6 +6,7 @@
 package org.jetbrains.kotlin.test.backend.handlers
 
 import org.jetbrains.kotlin.codegen.CommonSMAPTestUtil
+import org.jetbrains.kotlin.codegen.getClassFiles
 import org.jetbrains.kotlin.codegen.inline.GENERATE_SMAP
 import org.jetbrains.kotlin.test.directives.CodegenTestDirectives
 import org.jetbrains.kotlin.test.directives.CodegenTestDirectives.SEPARATE_SMAP_DUMPS
@@ -32,7 +33,7 @@ class SMAPDumpHandler(testServices: TestServices) : JvmBinaryArtifactHandler(tes
     override fun processModule(module: TestModule, info: BinaryArtifacts.Jvm) {
         if (!GENERATE_SMAP) return
 
-        val compiledSmaps = CommonSMAPTestUtil.extractSMAPFromClasses(info.classFileFactory.currentOutput)
+        val compiledSmaps = CommonSMAPTestUtil.extractSMAPFromClasses(info.classFileFactory.getClassFiles())
 
         CommonSMAPTestUtil.checkNoConflictMappings(compiledSmaps, assertions)
 
@@ -52,6 +53,8 @@ class SMAPDumpHandler(testServices: TestServices) : JvmBinaryArtifactHandler(tes
     }
 
     override fun processAfterAllModules(someAssertionWasFailed: Boolean) {
+        if (dumper.isEmpty()) return
+
         val separateDumpEnabled = separateDumpsEnabled()
         val isSeparateCompilation = isSeparateCompilation()
 
