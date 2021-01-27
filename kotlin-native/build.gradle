@@ -113,10 +113,10 @@ allprojects {
     }
 
     repositories {
-        maven {
-            url 'https://cache-redirector.jetbrains.com/maven-central'
-        }
-        mavenCentral()
+        if (UtilsKt.getCacheRedirectorEnabled(project))
+            maven { url 'https://cache-redirector.jetbrains.com/maven-central' }
+        else
+            mavenCentral()
         maven {
             url project.bootstrapKotlinRepo
         }
