@@ -9,6 +9,7 @@ import org.jetbrains.kotlin.codegen.CommonSMAPTestUtil
 import org.jetbrains.kotlin.codegen.getClassFiles
 import org.jetbrains.kotlin.codegen.inline.GENERATE_SMAP
 import org.jetbrains.kotlin.test.directives.CodegenTestDirectives
+import org.jetbrains.kotlin.test.directives.CodegenTestDirectives.DUMP_SMAP
 import org.jetbrains.kotlin.test.directives.CodegenTestDirectives.SEPARATE_SMAP_DUMPS
 import org.jetbrains.kotlin.test.directives.model.DirectivesContainer
 import org.jetbrains.kotlin.test.model.BinaryArtifacts
@@ -32,6 +33,7 @@ class SMAPDumpHandler(testServices: TestServices) : JvmBinaryArtifactHandler(tes
 
     override fun processModule(module: TestModule, info: BinaryArtifacts.Jvm) {
         if (!GENERATE_SMAP) return
+        if (DUMP_SMAP !in module.directives) return
 
         val compiledSmaps = CommonSMAPTestUtil.extractSMAPFromClasses(info.classFileFactory.getClassFiles())
 
