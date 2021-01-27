@@ -14,9 +14,6 @@ import static org.jetbrains.kotlin.konan.target.Architecture.*
 
 buildscript {
     repositories {
-        maven {
-            url 'https://cache-redirector.jetbrains.com/maven-central'
-        }
         mavenCentral()
 	    maven {
             url project.bootstrapKotlinRepo
