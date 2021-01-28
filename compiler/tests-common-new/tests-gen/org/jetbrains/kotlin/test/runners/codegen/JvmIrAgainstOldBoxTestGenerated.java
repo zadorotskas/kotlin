@@ -496,7 +496,7 @@ public class JvmIrAgainstOldBoxTestGenerated extends AbstractJvmIrAgainstOldBoxT
     @Nested
     @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/fir")
     @TestDataPath("$PROJECT_ROOT")
-    public class Fir extends AbstractJvmIrAgainstOldBoxTest {
+    public class Fir {
         @Test
         public void testAllFilesPresentInFir() throws Exception {
             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/fir"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD, true);
@@ -536,7 +536,7 @@ public class JvmIrAgainstOldBoxTestGenerated extends AbstractJvmIrAgainstOldBoxT
     @Nested
     @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8")
     @TestDataPath("$PROJECT_ROOT")
-    public class Jvm8 extends AbstractJvmIrAgainstOldBoxTest {
+    public class Jvm8 {
         @Test
         public void testAllFilesPresentInJvm8() throws Exception {
             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD, true);
@@ -545,7 +545,7 @@ public class JvmIrAgainstOldBoxTestGenerated extends AbstractJvmIrAgainstOldBoxT
         @Nested
         @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults")
         @TestDataPath("$PROJECT_ROOT")
-        public class Defaults extends AbstractJvmIrAgainstOldBoxTest {
+        public class Defaults {
             @Test
             public void testAllFilesPresentInDefaults() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD, true);
@@ -590,7 +590,7 @@ public class JvmIrAgainstOldBoxTestGenerated extends AbstractJvmIrAgainstOldBoxT
             @Nested
             @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/allCompatibility")
             @TestDataPath("$PROJECT_ROOT")
-            public class AllCompatibility extends AbstractJvmIrAgainstOldBoxTest {
+            public class AllCompatibility {
                 @Test
                 public void testAllFilesPresentInAllCompatibility() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/allCompatibility"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD, true);
@@ -641,7 +641,7 @@ public class JvmIrAgainstOldBoxTestGenerated extends AbstractJvmIrAgainstOldBoxT
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/allCompatibility/delegationBy")
                 @TestDataPath("$PROJECT_ROOT")
-                public class DelegationBy extends AbstractJvmIrAgainstOldBoxTest {
+                public class DelegationBy {
                     @Test
                     public void testAllFilesPresentInDelegationBy() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/allCompatibility/delegationBy"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD, true);
@@ -664,7 +664,7 @@ public class JvmIrAgainstOldBoxTestGenerated extends AbstractJvmIrAgainstOldBoxT
             @Nested
             @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/interop")
             @TestDataPath("$PROJECT_ROOT")
-            public class Interop extends AbstractJvmIrAgainstOldBoxTest {
+            public class Interop {
                 @Test
                 public void testAllFilesPresentInInterop() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/interop"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD, true);
@@ -717,7 +717,7 @@ public class JvmIrAgainstOldBoxTestGenerated extends AbstractJvmIrAgainstOldBoxT
         @Nested
         @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/jvm8against6")
         @TestDataPath("$PROJECT_ROOT")
-        public class Jvm8against6 extends AbstractJvmIrAgainstOldBoxTest {
+        public class Jvm8against6 {
             @Test
             public void testAllFilesPresentInJvm8against6() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/jvm8against6"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD, true);
@@ -762,7 +762,7 @@ public class JvmIrAgainstOldBoxTestGenerated extends AbstractJvmIrAgainstOldBoxT
             @Nested
             @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/jvm8against6/delegation")
             @TestDataPath("$PROJECT_ROOT")
-            public class Delegation extends AbstractJvmIrAgainstOldBoxTest {
+            public class Delegation {
                 @Test
                 public void testAllFilesPresentInDelegation() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/jvm8against6/delegation"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD, true);
@@ -792,7 +792,7 @@ public class JvmIrAgainstOldBoxTestGenerated extends AbstractJvmIrAgainstOldBoxT
     @Nested
     @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/typeAnnotations")
     @TestDataPath("$PROJECT_ROOT")
-    public class TypeAnnotations extends AbstractJvmIrAgainstOldBoxTest {
+    public class TypeAnnotations {
         @Test
         public void testAllFilesPresentInTypeAnnotations() throws Exception {
             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/typeAnnotations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_MULTI_MODULE_IR_AGAINST_OLD, true);

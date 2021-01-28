@@ -21,7 +21,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
     @Nested
     @TestMetadata("compiler/testData/codegen/box")
     @TestDataPath("$PROJECT_ROOT")
-    public class Box extends AbstractIrBlackBoxCodegenTest {
+    public class Box {
         @Test
         public void testAllFilesPresentInBox() throws Exception {
             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true, "oldLanguageVersions");
@@ -30,7 +30,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/annotations")
         @TestDataPath("$PROJECT_ROOT")
-        public class Annotations extends AbstractIrBlackBoxCodegenTest {
+        public class Annotations {
             @Test
             public void testAllFilesPresentInAnnotations() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/annotations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -267,7 +267,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/annotations/annotatedLambda")
             @TestDataPath("$PROJECT_ROOT")
-            public class AnnotatedLambda extends AbstractIrBlackBoxCodegenTest {
+            public class AnnotatedLambda {
                 @Test
                 public void testAllFilesPresentInAnnotatedLambda() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/annotations/annotatedLambda"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -307,7 +307,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/annotations/typeAnnotations")
             @TestDataPath("$PROJECT_ROOT")
-            public class TypeAnnotations extends AbstractIrBlackBoxCodegenTest {
+            public class TypeAnnotations {
                 @Test
                 public void testAllFilesPresentInTypeAnnotations() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/annotations/typeAnnotations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -354,7 +354,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/argumentOrder")
         @TestDataPath("$PROJECT_ROOT")
-        public class ArgumentOrder extends AbstractIrBlackBoxCodegenTest {
+        public class ArgumentOrder {
             @Test
             public void testAllFilesPresentInArgumentOrder() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/argumentOrder"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -460,7 +460,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/arrays")
         @TestDataPath("$PROJECT_ROOT")
-        public class Arrays extends AbstractIrBlackBoxCodegenTest {
+        public class Arrays {
             @Test
             public void testAllFilesPresentInArrays() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/arrays"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -847,7 +847,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/arrays/arraysOfInlineClass")
             @TestDataPath("$PROJECT_ROOT")
-            public class ArraysOfInlineClass extends AbstractIrBlackBoxCodegenTest {
+            public class ArraysOfInlineClass {
                 @Test
                 @TestMetadata("accessArrayOfInlineClass.kt")
                 public void testAccessArrayOfInlineClass() throws Exception {
@@ -875,7 +875,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/arrays/forInReversed")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInReversed extends AbstractIrBlackBoxCodegenTest {
+            public class ForInReversed {
                 @Test
                 public void testAllFilesPresentInForInReversed() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/arrays/forInReversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -909,7 +909,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/arrays/multiDecl")
             @TestDataPath("$PROJECT_ROOT")
-            public class MultiDecl extends AbstractIrBlackBoxCodegenTest {
+            public class MultiDecl {
                 @Test
                 public void testAllFilesPresentInMultiDecl() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/arrays/multiDecl"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -966,7 +966,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/arrays/multiDecl/int")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Int extends AbstractIrBlackBoxCodegenTest {
+                public class Int {
                     @Test
                     public void testAllFilesPresentInInt() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/arrays/multiDecl/int"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -1000,7 +1000,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/arrays/multiDecl/long")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Long extends AbstractIrBlackBoxCodegenTest {
+                public class Long {
                     @Test
                     public void testAllFilesPresentInLong() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/arrays/multiDecl/long"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -1036,7 +1036,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/assert")
         @TestDataPath("$PROJECT_ROOT")
-        public class Assert extends AbstractIrBlackBoxCodegenTest {
+        public class Assert {
             @Test
             public void testAllFilesPresentInAssert() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/assert"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -1057,7 +1057,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/assert/jvm")
             @TestDataPath("$PROJECT_ROOT")
-            public class Jvm extends AbstractIrBlackBoxCodegenTest {
+            public class Jvm {
                 @Test
                 public void testAllFilesPresentInJvm() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/assert/jvm"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -1200,7 +1200,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/binaryOp")
         @TestDataPath("$PROJECT_ROOT")
-        public class BinaryOp extends AbstractIrBlackBoxCodegenTest {
+        public class BinaryOp {
             @Test
             public void testAllFilesPresentInBinaryOp() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/binaryOp"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -1366,7 +1366,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/boxingOptimization")
         @TestDataPath("$PROJECT_ROOT")
-        public class BoxingOptimization extends AbstractIrBlackBoxCodegenTest {
+        public class BoxingOptimization {
             @Test
             public void testAllFilesPresentInBoxingOptimization() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/boxingOptimization"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -1562,7 +1562,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/bridges")
         @TestDataPath("$PROJECT_ROOT")
-        public class Bridges extends AbstractIrBlackBoxCodegenTest {
+        public class Bridges {
             @Test
             @TestMetadata("abstractOverrideBridge.kt")
             public void testAbstractOverrideBridge() throws Exception {
@@ -1919,7 +1919,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/bridges/substitutionInSuperClass")
             @TestDataPath("$PROJECT_ROOT")
-            public class SubstitutionInSuperClass extends AbstractIrBlackBoxCodegenTest {
+            public class SubstitutionInSuperClass {
                 @Test
                 @TestMetadata("abstractFun.kt")
                 public void testAbstractFun() throws Exception {
@@ -1996,7 +1996,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/builtinStubMethods")
         @TestDataPath("$PROJECT_ROOT")
-        public class BuiltinStubMethods extends AbstractIrBlackBoxCodegenTest {
+        public class BuiltinStubMethods {
             @Test
             @TestMetadata("abstractMember.kt")
             public void testAbstractMember() throws Exception {
@@ -2143,7 +2143,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/builtinStubMethods/extendJavaCollections")
             @TestDataPath("$PROJECT_ROOT")
-            public class ExtendJavaCollections extends AbstractIrBlackBoxCodegenTest {
+            public class ExtendJavaCollections {
                 @Test
                 @TestMetadata("abstractList.kt")
                 public void testAbstractList() throws Exception {
@@ -2195,7 +2195,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/builtinStubMethods/mapGetOrDefault")
             @TestDataPath("$PROJECT_ROOT")
-            public class MapGetOrDefault extends AbstractIrBlackBoxCodegenTest {
+            public class MapGetOrDefault {
                 @Test
                 public void testAllFilesPresentInMapGetOrDefault() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/builtinStubMethods/mapGetOrDefault"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -2223,7 +2223,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/builtinStubMethods/mapRemove")
             @TestDataPath("$PROJECT_ROOT")
-            public class MapRemove extends AbstractIrBlackBoxCodegenTest {
+            public class MapRemove {
                 @Test
                 public void testAllFilesPresentInMapRemove() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/builtinStubMethods/mapRemove"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -2258,7 +2258,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/callableReference")
         @TestDataPath("$PROJECT_ROOT")
-        public class CallableReference extends AbstractIrBlackBoxCodegenTest {
+        public class CallableReference {
             @Test
             public void testAllFilesPresentInCallableReference() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/callableReference"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -2345,7 +2345,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/callableReference/adaptedReferences")
             @TestDataPath("$PROJECT_ROOT")
-            public class AdaptedReferences extends AbstractIrBlackBoxCodegenTest {
+            public class AdaptedReferences {
                 @Test
                 public void testAllFilesPresentInAdaptedReferences() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/callableReference/adaptedReferences"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -2516,7 +2516,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/callableReference/adaptedReferences/suspendConversion")
                 @TestDataPath("$PROJECT_ROOT")
-                public class SuspendConversion extends AbstractIrBlackBoxCodegenTest {
+                public class SuspendConversion {
                     @Test
                     @TestMetadata("adaptedWithCoercionToUnit.kt")
                     public void testAdaptedWithCoercionToUnit() throws Exception {
@@ -2617,7 +2617,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/callableReference/bound")
             @TestDataPath("$PROJECT_ROOT")
-            public class Bound extends AbstractIrBlackBoxCodegenTest {
+            public class Bound {
                 @Test
                 @TestMetadata("adapted.kt")
                 public void testAdapted() throws Exception {
@@ -2794,7 +2794,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/callableReference/bound/equals")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Equals extends AbstractIrBlackBoxCodegenTest {
+                public class Equals {
                     @Test
                     public void testAllFilesPresentInEquals() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/callableReference/bound/equals"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -2829,7 +2829,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/callableReference/equality")
             @TestDataPath("$PROJECT_ROOT")
-            public class Equality extends AbstractIrBlackBoxCodegenTest {
+            public class Equality {
                 @Test
                 public void testAllFilesPresentInEquality() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/callableReference/equality"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -2911,7 +2911,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/callableReference/function")
             @TestDataPath("$PROJECT_ROOT")
-            public class Function extends AbstractIrBlackBoxCodegenTest {
+            public class Function {
                 @Test
                 @TestMetadata("abstractClassMember.kt")
                 public void testAbstractClassMember() throws Exception {
@@ -3250,7 +3250,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/callableReference/function/local")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Local extends AbstractIrBlackBoxCodegenTest {
+                public class Local {
                     @Test
                     public void testAllFilesPresentInLocal() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/callableReference/function/local"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -3381,7 +3381,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/callableReference/property")
             @TestDataPath("$PROJECT_ROOT")
-            public class Property extends AbstractIrBlackBoxCodegenTest {
+            public class Property {
                 @Test
                 @TestMetadata("accessViaSubclass.kt")
                 public void testAccessViaSubclass() throws Exception {
@@ -3571,7 +3571,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/callableReference/serializability")
             @TestDataPath("$PROJECT_ROOT")
-            public class Serializability extends AbstractIrBlackBoxCodegenTest {
+            public class Serializability {
                 @Test
                 @TestMetadata("adaptedReferences.kt")
                 public void testAdaptedReferences() throws Exception {
@@ -3618,7 +3618,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/casts")
         @TestDataPath("$PROJECT_ROOT")
-        public class Casts extends AbstractIrBlackBoxCodegenTest {
+        public class Casts {
             @Test
             public void testAllFilesPresentInCasts() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/casts"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -3777,7 +3777,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/casts/functions")
             @TestDataPath("$PROJECT_ROOT")
-            public class Functions extends AbstractIrBlackBoxCodegenTest {
+            public class Functions {
                 @Test
                 public void testAllFilesPresentInFunctions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/casts/functions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -3865,7 +3865,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/casts/javaInterop")
             @TestDataPath("$PROJECT_ROOT")
-            public class JavaInterop extends AbstractIrBlackBoxCodegenTest {
+            public class JavaInterop {
                 @Test
                 public void testAllFilesPresentInJavaInterop() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/casts/javaInterop"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -3959,7 +3959,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/casts/literalExpressionAsGenericArgument")
             @TestDataPath("$PROJECT_ROOT")
-            public class LiteralExpressionAsGenericArgument extends AbstractIrBlackBoxCodegenTest {
+            public class LiteralExpressionAsGenericArgument {
                 @Test
                 public void testAllFilesPresentInLiteralExpressionAsGenericArgument() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/casts/literalExpressionAsGenericArgument"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -4011,7 +4011,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/casts/mutableCollections")
             @TestDataPath("$PROJECT_ROOT")
-            public class MutableCollections extends AbstractIrBlackBoxCodegenTest {
+            public class MutableCollections {
                 @Test
                 public void testAllFilesPresentInMutableCollections() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/casts/mutableCollections"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -4070,7 +4070,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/checkcastOptimization")
         @TestDataPath("$PROJECT_ROOT")
-        public class CheckcastOptimization extends AbstractIrBlackBoxCodegenTest {
+        public class CheckcastOptimization {
             @Test
             public void testAllFilesPresentInCheckcastOptimization() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/checkcastOptimization"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -4092,7 +4092,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/classLiteral")
         @TestDataPath("$PROJECT_ROOT")
-        public class ClassLiteral extends AbstractIrBlackBoxCodegenTest {
+        public class ClassLiteral {
             @Test
             public void testAllFilesPresentInClassLiteral() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/classLiteral"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -4113,7 +4113,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/classLiteral/bound")
             @TestDataPath("$PROJECT_ROOT")
-            public class Bound extends AbstractIrBlackBoxCodegenTest {
+            public class Bound {
                 @Test
                 public void testAllFilesPresentInBound() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/classLiteral/bound"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -4153,7 +4153,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/classLiteral/java")
             @TestDataPath("$PROJECT_ROOT")
-            public class Java extends AbstractIrBlackBoxCodegenTest {
+            public class Java {
                 @Test
                 public void testAllFilesPresentInJava() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/classLiteral/java"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -4212,7 +4212,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/classes")
         @TestDataPath("$PROJECT_ROOT")
-        public class Classes extends AbstractIrBlackBoxCodegenTest {
+        public class Classes {
             @Test
             public void testAllFilesPresentInClasses() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/classes"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -4935,7 +4935,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/classes/inner")
             @TestDataPath("$PROJECT_ROOT")
-            public class Inner extends AbstractIrBlackBoxCodegenTest {
+            public class Inner {
                 @Test
                 public void testAllFilesPresentInInner() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/classes/inner"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -4988,7 +4988,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/closures")
         @TestDataPath("$PROJECT_ROOT")
-        public class Closures extends AbstractIrBlackBoxCodegenTest {
+        public class Closures {
             @Test
             public void testAllFilesPresentInClosures() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/closures"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -5273,7 +5273,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/closures/captureInSuperConstructorCall")
             @TestDataPath("$PROJECT_ROOT")
-            public class CaptureInSuperConstructorCall extends AbstractIrBlackBoxCodegenTest {
+            public class CaptureInSuperConstructorCall {
                 @Test
                 public void testAllFilesPresentInCaptureInSuperConstructorCall() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/closures/captureInSuperConstructorCall"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -5475,7 +5475,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/closures/captureOuterProperty")
             @TestDataPath("$PROJECT_ROOT")
-            public class CaptureOuterProperty extends AbstractIrBlackBoxCodegenTest {
+            public class CaptureOuterProperty {
                 @Test
                 public void testAllFilesPresentInCaptureOuterProperty() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/closures/captureOuterProperty"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -5533,7 +5533,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/closures/capturedVarsOptimization")
             @TestDataPath("$PROJECT_ROOT")
-            public class CapturedVarsOptimization extends AbstractIrBlackBoxCodegenTest {
+            public class CapturedVarsOptimization {
                 @Test
                 public void testAllFilesPresentInCapturedVarsOptimization() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/closures/capturedVarsOptimization"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -5615,7 +5615,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/closures/closureInsideClosure")
             @TestDataPath("$PROJECT_ROOT")
-            public class ClosureInsideClosure extends AbstractIrBlackBoxCodegenTest {
+            public class ClosureInsideClosure {
                 @Test
                 public void testAllFilesPresentInClosureInsideClosure() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/closures/closureInsideClosure"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -5662,7 +5662,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/collectionLiterals")
         @TestDataPath("$PROJECT_ROOT")
-        public class CollectionLiterals extends AbstractIrBlackBoxCodegenTest {
+        public class CollectionLiterals {
             @Test
             public void testAllFilesPresentInCollectionLiterals() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/collectionLiterals"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -5696,7 +5696,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/collections")
         @TestDataPath("$PROJECT_ROOT")
-        public class Collections extends AbstractIrBlackBoxCodegenTest {
+        public class Collections {
             @Test
             @TestMetadata("addCollectionStubWithCovariantOverride.kt")
             public void testAddCollectionStubWithCovariantOverride() throws Exception {
@@ -5910,7 +5910,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/companion")
         @TestDataPath("$PROJECT_ROOT")
-        public class Companion extends AbstractIrBlackBoxCodegenTest {
+        public class Companion {
             @Test
             public void testAllFilesPresentInCompanion() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/companion"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -5932,7 +5932,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/compatibility")
         @TestDataPath("$PROJECT_ROOT")
-        public class Compatibility extends AbstractIrBlackBoxCodegenTest {
+        public class Compatibility {
             @Test
             public void testAllFilesPresentInCompatibility() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compatibility"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -5948,7 +5948,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin")
         @TestDataPath("$PROJECT_ROOT")
-        public class CompileKotlinAgainstKotlin extends AbstractIrBlackBoxCodegenTest {
+        public class CompileKotlinAgainstKotlin {
             @Test
             public void testAllFilesPresentInCompileKotlinAgainstKotlin() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6425,7 +6425,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/fir")
             @TestDataPath("$PROJECT_ROOT")
-            public class Fir extends AbstractIrBlackBoxCodegenTest {
+            public class Fir {
                 @Test
                 public void testAllFilesPresentInFir() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/fir"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6465,7 +6465,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8")
             @TestDataPath("$PROJECT_ROOT")
-            public class Jvm8 extends AbstractIrBlackBoxCodegenTest {
+            public class Jvm8 {
                 @Test
                 public void testAllFilesPresentInJvm8() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6474,7 +6474,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Defaults extends AbstractIrBlackBoxCodegenTest {
+                public class Defaults {
                     @Test
                     public void testAllFilesPresentInDefaults() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6519,7 +6519,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/allCompatibility")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class AllCompatibility extends AbstractIrBlackBoxCodegenTest {
+                    public class AllCompatibility {
                         @Test
                         public void testAllFilesPresentInAllCompatibility() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/allCompatibility"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6570,7 +6570,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/allCompatibility/delegationBy")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class DelegationBy extends AbstractIrBlackBoxCodegenTest {
+                        public class DelegationBy {
                             @Test
                             public void testAllFilesPresentInDelegationBy() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/allCompatibility/delegationBy"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6593,7 +6593,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/interop")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Interop extends AbstractIrBlackBoxCodegenTest {
+                    public class Interop {
                         @Test
                         public void testAllFilesPresentInInterop() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/defaults/interop"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6646,7 +6646,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/jvm8against6")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Jvm8against6 extends AbstractIrBlackBoxCodegenTest {
+                public class Jvm8against6 {
                     @Test
                     public void testAllFilesPresentInJvm8against6() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/jvm8against6"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6691,7 +6691,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/jvm8against6/delegation")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Delegation extends AbstractIrBlackBoxCodegenTest {
+                    public class Delegation {
                         @Test
                         public void testAllFilesPresentInDelegation() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/jvm8/jvm8against6/delegation"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6721,7 +6721,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/compileKotlinAgainstKotlin/typeAnnotations")
             @TestDataPath("$PROJECT_ROOT")
-            public class TypeAnnotations extends AbstractIrBlackBoxCodegenTest {
+            public class TypeAnnotations {
                 @Test
                 public void testAllFilesPresentInTypeAnnotations() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/compileKotlinAgainstKotlin/typeAnnotations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6738,7 +6738,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/constants")
         @TestDataPath("$PROJECT_ROOT")
-        public class Constants extends AbstractIrBlackBoxCodegenTest {
+        public class Constants {
             @Test
             public void testAllFilesPresentInConstants() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/constants"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6808,7 +6808,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/constructorCall")
         @TestDataPath("$PROJECT_ROOT")
-        public class ConstructorCall extends AbstractIrBlackBoxCodegenTest {
+        public class ConstructorCall {
             @Test
             public void testAllFilesPresentInConstructorCall() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/constructorCall"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -6920,7 +6920,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/contracts")
         @TestDataPath("$PROJECT_ROOT")
-        public class Contracts extends AbstractIrBlackBoxCodegenTest {
+        public class Contracts {
             @Test
             public void testAllFilesPresentInContracts() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/contracts"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -7002,7 +7002,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/controlStructures")
         @TestDataPath("$PROJECT_ROOT")
-        public class ControlStructures extends AbstractIrBlackBoxCodegenTest {
+        public class ControlStructures {
             @Test
             public void testAllFilesPresentInControlStructures() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/controlStructures"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -7485,7 +7485,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/controlStructures/breakContinueInExpressions")
             @TestDataPath("$PROJECT_ROOT")
-            public class BreakContinueInExpressions extends AbstractIrBlackBoxCodegenTest {
+            public class BreakContinueInExpressions {
                 @Test
                 public void testAllFilesPresentInBreakContinueInExpressions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/controlStructures/breakContinueInExpressions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -7603,7 +7603,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/controlStructures/forInArray")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInArray extends AbstractIrBlackBoxCodegenTest {
+            public class ForInArray {
                 @Test
                 public void testAllFilesPresentInForInArray() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/controlStructures/forInArray"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -7673,7 +7673,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/controlStructures/forInArrayWithIndex")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInArrayWithIndex extends AbstractIrBlackBoxCodegenTest {
+            public class ForInArrayWithIndex {
                 @Test
                 public void testAllFilesPresentInForInArrayWithIndex() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/controlStructures/forInArrayWithIndex"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -7803,7 +7803,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/controlStructures/forInCharSequenceWithIndex")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInCharSequenceWithIndex extends AbstractIrBlackBoxCodegenTest {
+            public class ForInCharSequenceWithIndex {
                 @Test
                 public void testAllFilesPresentInForInCharSequenceWithIndex() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/controlStructures/forInCharSequenceWithIndex"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -7897,7 +7897,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/controlStructures/forInIterableWithIndex")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInIterableWithIndex extends AbstractIrBlackBoxCodegenTest {
+            public class ForInIterableWithIndex {
                 @Test
                 public void testAllFilesPresentInForInIterableWithIndex() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/controlStructures/forInIterableWithIndex"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -7973,7 +7973,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/controlStructures/forInSequenceWithIndex")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInSequenceWithIndex extends AbstractIrBlackBoxCodegenTest {
+            public class ForInSequenceWithIndex {
                 @Test
                 public void testAllFilesPresentInForInSequenceWithIndex() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/controlStructures/forInSequenceWithIndex"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -8049,7 +8049,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/controlStructures/returnsNothing")
             @TestDataPath("$PROJECT_ROOT")
-            public class ReturnsNothing extends AbstractIrBlackBoxCodegenTest {
+            public class ReturnsNothing {
                 @Test
                 public void testAllFilesPresentInReturnsNothing() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/controlStructures/returnsNothing"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -8089,7 +8089,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/controlStructures/tryCatchInExpressions")
             @TestDataPath("$PROJECT_ROOT")
-            public class TryCatchInExpressions extends AbstractIrBlackBoxCodegenTest {
+            public class TryCatchInExpressions {
                 @Test
                 public void testAllFilesPresentInTryCatchInExpressions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/controlStructures/tryCatchInExpressions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -8280,7 +8280,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/coroutines")
         @TestDataPath("$PROJECT_ROOT")
-        public class Coroutines extends AbstractIrBlackBoxCodegenTest {
+        public class Coroutines {
             @Test
             @TestMetadata("32defaultParametersInSuspend.kt")
             public void test32defaultParametersInSuspend() throws Exception {
@@ -8991,7 +8991,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/bridges")
             @TestDataPath("$PROJECT_ROOT")
-            public class Bridges extends AbstractIrBlackBoxCodegenTest {
+            public class Bridges {
                 @Test
                 public void testAllFilesPresentInBridges() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/bridges"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9019,7 +9019,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/controlFlow")
             @TestDataPath("$PROJECT_ROOT")
-            public class ControlFlow extends AbstractIrBlackBoxCodegenTest {
+            public class ControlFlow {
                 @Test
                 public void testAllFilesPresentInControlFlow() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/controlFlow"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9161,7 +9161,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/debug")
             @TestDataPath("$PROJECT_ROOT")
-            public class Debug extends AbstractIrBlackBoxCodegenTest {
+            public class Debug {
                 @Test
                 public void testAllFilesPresentInDebug() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/debug"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9219,7 +9219,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/featureIntersection")
             @TestDataPath("$PROJECT_ROOT")
-            public class FeatureIntersection extends AbstractIrBlackBoxCodegenTest {
+            public class FeatureIntersection {
                 @Test
                 public void testAllFilesPresentInFeatureIntersection() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/featureIntersection"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9330,7 +9330,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/coroutines/featureIntersection/callableReference")
                 @TestDataPath("$PROJECT_ROOT")
-                public class CallableReference extends AbstractIrBlackBoxCodegenTest {
+                public class CallableReference {
                     @Test
                     public void testAllFilesPresentInCallableReference() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/featureIntersection/callableReference"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9363,7 +9363,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/coroutines/featureIntersection/callableReference/bound")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Bound extends AbstractIrBlackBoxCodegenTest {
+                    public class Bound {
                         @Test
                         public void testAllFilesPresentInBound() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/featureIntersection/callableReference/bound"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9379,7 +9379,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/coroutines/featureIntersection/callableReference/function")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Function extends AbstractIrBlackBoxCodegenTest {
+                    public class Function {
                         @Test
                         public void testAllFilesPresentInFunction() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/featureIntersection/callableReference/function"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9406,7 +9406,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/coroutines/featureIntersection/callableReference/function/local")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class Local extends AbstractIrBlackBoxCodegenTest {
+                        public class Local {
                             @Test
                             public void testAllFilesPresentInLocal() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/featureIntersection/callableReference/function/local"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9424,7 +9424,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/coroutines/featureIntersection/tailrec")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Tailrec extends AbstractIrBlackBoxCodegenTest {
+                public class Tailrec {
                     @Test
                     public void testAllFilesPresentInTailrec() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/featureIntersection/tailrec"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9513,7 +9513,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/inlineClasses")
             @TestDataPath("$PROJECT_ROOT")
-            public class InlineClasses extends AbstractIrBlackBoxCodegenTest {
+            public class InlineClasses {
                 @Test
                 public void testAllFilesPresentInInlineClasses() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/inlineClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9528,7 +9528,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/coroutines/inlineClasses/direct")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Direct extends AbstractIrBlackBoxCodegenTest {
+                public class Direct {
                     @Test
                     public void testAllFilesPresentInDirect() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/inlineClasses/direct"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -9796,7 +9796,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/coroutines/inlineClasses/resume")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Resume extends AbstractIrBlackBoxCodegenTest {
+                public class Resume {
                     @Test
                     public void testAllFilesPresentInResume() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/inlineClasses/resume"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10064,7 +10064,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/coroutines/inlineClasses/resumeWithException")
                 @TestDataPath("$PROJECT_ROOT")
-                public class ResumeWithException extends AbstractIrBlackBoxCodegenTest {
+                public class ResumeWithException {
                     @Test
                     public void testAllFilesPresentInResumeWithException() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/inlineClasses/resumeWithException"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10315,7 +10315,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/intLikeVarSpilling")
             @TestDataPath("$PROJECT_ROOT")
-            public class IntLikeVarSpilling extends AbstractIrBlackBoxCodegenTest {
+            public class IntLikeVarSpilling {
                 @Test
                 public void testAllFilesPresentInIntLikeVarSpilling() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/intLikeVarSpilling"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10391,7 +10391,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/intrinsicSemantics")
             @TestDataPath("$PROJECT_ROOT")
-            public class IntrinsicSemantics extends AbstractIrBlackBoxCodegenTest {
+            public class IntrinsicSemantics {
                 @Test
                 public void testAllFilesPresentInIntrinsicSemantics() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/intrinsicSemantics"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10449,7 +10449,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/javaInterop")
             @TestDataPath("$PROJECT_ROOT")
-            public class JavaInterop extends AbstractIrBlackBoxCodegenTest {
+            public class JavaInterop {
                 @Test
                 public void testAllFilesPresentInJavaInterop() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/javaInterop"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10489,7 +10489,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/localFunctions")
             @TestDataPath("$PROJECT_ROOT")
-            public class LocalFunctions extends AbstractIrBlackBoxCodegenTest {
+            public class LocalFunctions {
                 @Test
                 public void testAllFilesPresentInLocalFunctions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/localFunctions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10498,7 +10498,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/coroutines/localFunctions/anonymous")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Anonymous extends AbstractIrBlackBoxCodegenTest {
+                public class Anonymous {
                     @Test
                     public void testAllFilesPresentInAnonymous() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/localFunctions/anonymous"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10514,7 +10514,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/coroutines/localFunctions/named")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Named extends AbstractIrBlackBoxCodegenTest {
+                public class Named {
                     @Test
                     public void testAllFilesPresentInNamed() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/localFunctions/named"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10591,7 +10591,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/multiModule")
             @TestDataPath("$PROJECT_ROOT")
-            public class MultiModule extends AbstractIrBlackBoxCodegenTest {
+            public class MultiModule {
                 @Test
                 public void testAllFilesPresentInMultiModule() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/multiModule"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10655,7 +10655,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/redundantLocalsElimination")
             @TestDataPath("$PROJECT_ROOT")
-            public class RedundantLocalsElimination extends AbstractIrBlackBoxCodegenTest {
+            public class RedundantLocalsElimination {
                 @Test
                 public void testAllFilesPresentInRedundantLocalsElimination() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/redundantLocalsElimination"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10671,7 +10671,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/reflect")
             @TestDataPath("$PROJECT_ROOT")
-            public class Reflect extends AbstractIrBlackBoxCodegenTest {
+            public class Reflect {
                 @Test
                 public void testAllFilesPresentInReflect() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/reflect"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10699,7 +10699,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/stackUnwinding")
             @TestDataPath("$PROJECT_ROOT")
-            public class StackUnwinding extends AbstractIrBlackBoxCodegenTest {
+            public class StackUnwinding {
                 @Test
                 public void testAllFilesPresentInStackUnwinding() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/stackUnwinding"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10745,7 +10745,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/suspendConversion")
             @TestDataPath("$PROJECT_ROOT")
-            public class SuspendConversion extends AbstractIrBlackBoxCodegenTest {
+            public class SuspendConversion {
                 @Test
                 public void testAllFilesPresentInSuspendConversion() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/suspendConversion"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10779,7 +10779,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/suspendFunctionAsCoroutine")
             @TestDataPath("$PROJECT_ROOT")
-            public class SuspendFunctionAsCoroutine extends AbstractIrBlackBoxCodegenTest {
+            public class SuspendFunctionAsCoroutine {
                 @Test
                 public void testAllFilesPresentInSuspendFunctionAsCoroutine() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/suspendFunctionAsCoroutine"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10897,7 +10897,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/suspendFunctionTypeCall")
             @TestDataPath("$PROJECT_ROOT")
-            public class SuspendFunctionTypeCall extends AbstractIrBlackBoxCodegenTest {
+            public class SuspendFunctionTypeCall {
                 @Test
                 public void testAllFilesPresentInSuspendFunctionTypeCall() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/suspendFunctionTypeCall"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -10937,7 +10937,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/tailCallOptimizations")
             @TestDataPath("$PROJECT_ROOT")
-            public class TailCallOptimizations extends AbstractIrBlackBoxCodegenTest {
+            public class TailCallOptimizations {
                 @Test
                 public void testAllFilesPresentInTailCallOptimizations() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/tailCallOptimizations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11036,7 +11036,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/coroutines/tailCallOptimizations/unit")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Unit extends AbstractIrBlackBoxCodegenTest {
+                public class Unit {
                     @Test
                     public void testAllFilesPresentInUnit() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/tailCallOptimizations/unit"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11113,7 +11113,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/tailOperations")
             @TestDataPath("$PROJECT_ROOT")
-            public class TailOperations extends AbstractIrBlackBoxCodegenTest {
+            public class TailOperations {
                 @Test
                 public void testAllFilesPresentInTailOperations() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/tailOperations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11147,7 +11147,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/unitTypeReturn")
             @TestDataPath("$PROJECT_ROOT")
-            public class UnitTypeReturn extends AbstractIrBlackBoxCodegenTest {
+            public class UnitTypeReturn {
                 @Test
                 public void testAllFilesPresentInUnitTypeReturn() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/unitTypeReturn"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11199,7 +11199,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/coroutines/varSpilling")
             @TestDataPath("$PROJECT_ROOT")
-            public class VarSpilling extends AbstractIrBlackBoxCodegenTest {
+            public class VarSpilling {
                 @Test
                 public void testAllFilesPresentInVarSpilling() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/coroutines/varSpilling"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11246,7 +11246,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/dataClasses")
         @TestDataPath("$PROJECT_ROOT")
-        public class DataClasses extends AbstractIrBlackBoxCodegenTest {
+        public class DataClasses {
             @Test
             public void testAllFilesPresentInDataClasses() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/dataClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11351,7 +11351,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/dataClasses/copy")
             @TestDataPath("$PROJECT_ROOT")
-            public class Copy extends AbstractIrBlackBoxCodegenTest {
+            public class Copy {
                 @Test
                 public void testAllFilesPresentInCopy() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/dataClasses/copy"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11409,7 +11409,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/dataClasses/equals")
             @TestDataPath("$PROJECT_ROOT")
-            public class Equals extends AbstractIrBlackBoxCodegenTest {
+            public class Equals {
                 @Test
                 public void testAllFilesPresentInEquals() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/dataClasses/equals"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11461,7 +11461,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/dataClasses/hashCode")
             @TestDataPath("$PROJECT_ROOT")
-            public class HashCode extends AbstractIrBlackBoxCodegenTest {
+            public class HashCode {
                 @Test
                 public void testAllFilesPresentInHashCode() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/dataClasses/hashCode"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11549,7 +11549,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/dataClasses/toString")
             @TestDataPath("$PROJECT_ROOT")
-            public class ToString extends AbstractIrBlackBoxCodegenTest {
+            public class ToString {
                 @Test
                 public void testAllFilesPresentInToString() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/dataClasses/toString"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11602,7 +11602,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/deadCodeElimination")
         @TestDataPath("$PROJECT_ROOT")
-        public class DeadCodeElimination extends AbstractIrBlackBoxCodegenTest {
+        public class DeadCodeElimination {
             @Test
             public void testAllFilesPresentInDeadCodeElimination() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/deadCodeElimination"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11636,7 +11636,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/defaultArguments")
         @TestDataPath("$PROJECT_ROOT")
-        public class DefaultArguments extends AbstractIrBlackBoxCodegenTest {
+        public class DefaultArguments {
             @Test
             public void testAllFilesPresentInDefaultArguments() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/defaultArguments"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11747,7 +11747,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/defaultArguments/constructor")
             @TestDataPath("$PROJECT_ROOT")
-            public class Constructor extends AbstractIrBlackBoxCodegenTest {
+            public class Constructor {
                 @Test
                 public void testAllFilesPresentInConstructor() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/defaultArguments/constructor"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11859,7 +11859,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/defaultArguments/convention")
             @TestDataPath("$PROJECT_ROOT")
-            public class Convention extends AbstractIrBlackBoxCodegenTest {
+            public class Convention {
                 @Test
                 public void testAllFilesPresentInConvention() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/defaultArguments/convention"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -11911,7 +11911,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/defaultArguments/function")
             @TestDataPath("$PROJECT_ROOT")
-            public class Function extends AbstractIrBlackBoxCodegenTest {
+            public class Function {
                 @Test
                 @TestMetadata("abstractClass.kt")
                 public void testAbstractClass() throws Exception {
@@ -12089,7 +12089,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/defaultArguments/private")
             @TestDataPath("$PROJECT_ROOT")
-            public class Private extends AbstractIrBlackBoxCodegenTest {
+            public class Private {
                 @Test
                 public void testAllFilesPresentInPrivate() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/defaultArguments/private"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12123,7 +12123,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/defaultArguments/signature")
             @TestDataPath("$PROJECT_ROOT")
-            public class Signature extends AbstractIrBlackBoxCodegenTest {
+            public class Signature {
                 @Test
                 public void testAllFilesPresentInSignature() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/defaultArguments/signature"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12152,7 +12152,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/delegatedProperty")
         @TestDataPath("$PROJECT_ROOT")
-        public class DelegatedProperty extends AbstractIrBlackBoxCodegenTest {
+        public class DelegatedProperty {
             @Test
             @TestMetadata("accessTopLevelDelegatedPropertyInClinit.kt")
             public void testAccessTopLevelDelegatedPropertyInClinit() throws Exception {
@@ -12455,7 +12455,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/delegatedProperty/local")
             @TestDataPath("$PROJECT_ROOT")
-            public class Local extends AbstractIrBlackBoxCodegenTest {
+            public class Local {
                 @Test
                 public void testAllFilesPresentInLocal() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/delegatedProperty/local"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12567,7 +12567,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/delegatedProperty/optimizedDelegatedProperties")
             @TestDataPath("$PROJECT_ROOT")
-            public class OptimizedDelegatedProperties extends AbstractIrBlackBoxCodegenTest {
+            public class OptimizedDelegatedProperties {
                 @Test
                 public void testAllFilesPresentInOptimizedDelegatedProperties() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/delegatedProperty/optimizedDelegatedProperties"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12637,7 +12637,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/delegatedProperty/provideDelegate")
             @TestDataPath("$PROJECT_ROOT")
-            public class ProvideDelegate extends AbstractIrBlackBoxCodegenTest {
+            public class ProvideDelegate {
                 @Test
                 public void testAllFilesPresentInProvideDelegate() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/delegatedProperty/provideDelegate"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12780,7 +12780,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/delegation")
         @TestDataPath("$PROJECT_ROOT")
-        public class Delegation extends AbstractIrBlackBoxCodegenTest {
+        public class Delegation {
             @Test
             public void testAllFilesPresentInDelegation() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/delegation"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12880,7 +12880,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/destructuringDeclInLambdaParam")
         @TestDataPath("$PROJECT_ROOT")
-        public class DestructuringDeclInLambdaParam extends AbstractIrBlackBoxCodegenTest {
+        public class DestructuringDeclInLambdaParam {
             @Test
             public void testAllFilesPresentInDestructuringDeclInLambdaParam() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/destructuringDeclInLambdaParam"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12938,7 +12938,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/diagnostics")
         @TestDataPath("$PROJECT_ROOT")
-        public class Diagnostics extends AbstractIrBlackBoxCodegenTest {
+        public class Diagnostics {
             @Test
             public void testAllFilesPresentInDiagnostics() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/diagnostics"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12947,7 +12947,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/diagnostics/functions")
             @TestDataPath("$PROJECT_ROOT")
-            public class Functions extends AbstractIrBlackBoxCodegenTest {
+            public class Functions {
                 @Test
                 public void testAllFilesPresentInFunctions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/diagnostics/functions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12956,7 +12956,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/diagnostics/functions/inference")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Inference extends AbstractIrBlackBoxCodegenTest {
+                public class Inference {
                     @Test
                     public void testAllFilesPresentInInference() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/diagnostics/functions/inference"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12972,7 +12972,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/diagnostics/functions/invoke")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Invoke extends AbstractIrBlackBoxCodegenTest {
+                public class Invoke {
                     @Test
                     public void testAllFilesPresentInInvoke() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/diagnostics/functions/invoke"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -12981,7 +12981,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/diagnostics/functions/invoke/onObjects")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class OnObjects extends AbstractIrBlackBoxCodegenTest {
+                    public class OnObjects {
                         @Test
                         public void testAllFilesPresentInOnObjects() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/diagnostics/functions/invoke/onObjects"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -13052,7 +13052,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/diagnostics/functions/tailRecursion")
                 @TestDataPath("$PROJECT_ROOT")
-                public class TailRecursion extends AbstractIrBlackBoxCodegenTest {
+                public class TailRecursion {
                     @Test
                     public void testAllFilesPresentInTailRecursion() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/diagnostics/functions/tailRecursion"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -13309,7 +13309,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/diagnostics/vararg")
             @TestDataPath("$PROJECT_ROOT")
-            public class Vararg extends AbstractIrBlackBoxCodegenTest {
+            public class Vararg {
                 @Test
                 public void testAllFilesPresentInVararg() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/diagnostics/vararg"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -13326,7 +13326,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/elvis")
         @TestDataPath("$PROJECT_ROOT")
-        public class Elvis extends AbstractIrBlackBoxCodegenTest {
+        public class Elvis {
             @Test
             public void testAllFilesPresentInElvis() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/elvis"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -13378,7 +13378,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/enum")
         @TestDataPath("$PROJECT_ROOT")
-        public class Enum extends AbstractIrBlackBoxCodegenTest {
+        public class Enum {
             @Test
             @TestMetadata("abstractMethodInEnum.kt")
             public void testAbstractMethodInEnum() throws Exception {
@@ -13795,7 +13795,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/enum/defaultCtor")
             @TestDataPath("$PROJECT_ROOT")
-            public class DefaultCtor extends AbstractIrBlackBoxCodegenTest {
+            public class DefaultCtor {
                 @Test
                 public void testAllFilesPresentInDefaultCtor() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/enum/defaultCtor"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -13842,7 +13842,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/evaluate")
         @TestDataPath("$PROJECT_ROOT")
-        public class Evaluate extends AbstractIrBlackBoxCodegenTest {
+        public class Evaluate {
             @Test
             public void testAllFilesPresentInEvaluate() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/evaluate"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -13942,7 +13942,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/exclExcl")
         @TestDataPath("$PROJECT_ROOT")
-        public class ExclExcl extends AbstractIrBlackBoxCodegenTest {
+        public class ExclExcl {
             @Test
             public void testAllFilesPresentInExclExcl() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/exclExcl"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -13964,7 +13964,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/extensionFunctions")
         @TestDataPath("$PROJECT_ROOT")
-        public class ExtensionFunctions extends AbstractIrBlackBoxCodegenTest {
+        public class ExtensionFunctions {
             @Test
             public void testAllFilesPresentInExtensionFunctions() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/extensionFunctions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14130,7 +14130,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/extensionProperties")
         @TestDataPath("$PROJECT_ROOT")
-        public class ExtensionProperties extends AbstractIrBlackBoxCodegenTest {
+        public class ExtensionProperties {
             @Test
             @TestMetadata("accessorForPrivateSetter.kt")
             public void testAccessorForPrivateSetter() throws Exception {
@@ -14230,7 +14230,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/external")
         @TestDataPath("$PROJECT_ROOT")
-        public class External extends AbstractIrBlackBoxCodegenTest {
+        public class External {
             @Test
             public void testAllFilesPresentInExternal() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/external"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14258,7 +14258,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/fakeOverride")
         @TestDataPath("$PROJECT_ROOT")
-        public class FakeOverride extends AbstractIrBlackBoxCodegenTest {
+        public class FakeOverride {
             @Test
             public void testAllFilesPresentInFakeOverride() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/fakeOverride"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14304,7 +14304,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/fieldRename")
         @TestDataPath("$PROJECT_ROOT")
-        public class FieldRename extends AbstractIrBlackBoxCodegenTest {
+        public class FieldRename {
             @Test
             public void testAllFilesPresentInFieldRename() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/fieldRename"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14344,7 +14344,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/finally")
         @TestDataPath("$PROJECT_ROOT")
-        public class Finally extends AbstractIrBlackBoxCodegenTest {
+        public class Finally {
             @Test
             public void testAllFilesPresentInFinally() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/finally"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14486,7 +14486,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/fir")
         @TestDataPath("$PROJECT_ROOT")
-        public class Fir extends AbstractIrBlackBoxCodegenTest {
+        public class Fir {
             @Test
             public void testAllFilesPresentInFir() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/fir"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14526,7 +14526,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/fullJdk")
         @TestDataPath("$PROJECT_ROOT")
-        public class FullJdk extends AbstractIrBlackBoxCodegenTest {
+        public class FullJdk {
             @Test
             public void testAllFilesPresentInFullJdk() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/fullJdk"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14571,7 +14571,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/fullJdk/native")
             @TestDataPath("$PROJECT_ROOT")
-            public class Native extends AbstractIrBlackBoxCodegenTest {
+            public class Native {
                 @Test
                 public void testAllFilesPresentInNative() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/fullJdk/native"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14599,7 +14599,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/fullJdk/regressions")
             @TestDataPath("$PROJECT_ROOT")
-            public class Regressions extends AbstractIrBlackBoxCodegenTest {
+            public class Regressions {
                 @Test
                 public void testAllFilesPresentInRegressions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/fullJdk/regressions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14622,7 +14622,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/funInterface")
         @TestDataPath("$PROJECT_ROOT")
-        public class FunInterface extends AbstractIrBlackBoxCodegenTest {
+        public class FunInterface {
             @Test
             public void testAllFilesPresentInFunInterface() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/funInterface"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14757,7 +14757,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/funInterface/equality")
             @TestDataPath("$PROJECT_ROOT")
-            public class Equality extends AbstractIrBlackBoxCodegenTest {
+            public class Equality {
                 @Test
                 public void testAllFilesPresentInEquality() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/funInterface/equality"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -14798,7 +14798,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/functions")
         @TestDataPath("$PROJECT_ROOT")
-        public class Functions extends AbstractIrBlackBoxCodegenTest {
+        public class Functions {
             @Test
             public void testAllFilesPresentInFunctions() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/functions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -15077,7 +15077,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/functions/bigArity")
             @TestDataPath("$PROJECT_ROOT")
-            public class BigArity extends AbstractIrBlackBoxCodegenTest {
+            public class BigArity {
                 @Test
                 public void testAllFilesPresentInBigArity() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/functions/bigArity"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -15153,7 +15153,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/functions/functionExpression")
             @TestDataPath("$PROJECT_ROOT")
-            public class FunctionExpression extends AbstractIrBlackBoxCodegenTest {
+            public class FunctionExpression {
                 @Test
                 public void testAllFilesPresentInFunctionExpression() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/functions/functionExpression"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -15199,7 +15199,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/functions/invoke")
             @TestDataPath("$PROJECT_ROOT")
-            public class Invoke extends AbstractIrBlackBoxCodegenTest {
+            public class Invoke {
                 @Test
                 public void testAllFilesPresentInInvoke() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/functions/invoke"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -15299,7 +15299,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/functions/localFunctions")
             @TestDataPath("$PROJECT_ROOT")
-            public class LocalFunctions extends AbstractIrBlackBoxCodegenTest {
+            public class LocalFunctions {
                 @Test
                 public void testAllFilesPresentInLocalFunctions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/functions/localFunctions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -15490,7 +15490,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/hashPMap")
         @TestDataPath("$PROJECT_ROOT")
-        public class HashPMap extends AbstractIrBlackBoxCodegenTest {
+        public class HashPMap {
             @Test
             public void testAllFilesPresentInHashPMap() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/hashPMap"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -15536,7 +15536,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/ieee754")
         @TestDataPath("$PROJECT_ROOT")
-        public class Ieee754 extends AbstractIrBlackBoxCodegenTest {
+        public class Ieee754 {
             @Test
             public void testAllFilesPresentInIeee754() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ieee754"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -15846,7 +15846,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/increment")
         @TestDataPath("$PROJECT_ROOT")
-        public class Increment extends AbstractIrBlackBoxCodegenTest {
+        public class Increment {
             @Test
             public void testAllFilesPresentInIncrement() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/increment"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -16012,7 +16012,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/inference")
         @TestDataPath("$PROJECT_ROOT")
-        public class Inference extends AbstractIrBlackBoxCodegenTest {
+        public class Inference {
             @Test
             public void testAllFilesPresentInInference() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inference"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -16219,7 +16219,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inference/builderInference")
             @TestDataPath("$PROJECT_ROOT")
-            public class BuilderInference extends AbstractIrBlackBoxCodegenTest {
+            public class BuilderInference {
                 @Test
                 public void testAllFilesPresentInBuilderInference() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inference/builderInference"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -16302,7 +16302,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/inlineClasses")
         @TestDataPath("$PROJECT_ROOT")
-        public class InlineClasses extends AbstractIrBlackBoxCodegenTest {
+        public class InlineClasses {
             @Test
             public void testAllFilesPresentInInlineClasses() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -17331,7 +17331,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/boxReturnValueInLambda")
             @TestDataPath("$PROJECT_ROOT")
-            public class BoxReturnValueInLambda extends AbstractIrBlackBoxCodegenTest {
+            public class BoxReturnValueInLambda {
                 @Test
                 public void testAllFilesPresentInBoxReturnValueInLambda() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/boxReturnValueInLambda"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -17413,7 +17413,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/boxReturnValueOnOverride")
             @TestDataPath("$PROJECT_ROOT")
-            public class BoxReturnValueOnOverride extends AbstractIrBlackBoxCodegenTest {
+            public class BoxReturnValueOnOverride {
                 @Test
                 public void testAllFilesPresentInBoxReturnValueOnOverride() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/boxReturnValueOnOverride"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -17579,7 +17579,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/callableReferences")
             @TestDataPath("$PROJECT_ROOT")
-            public class CallableReferences extends AbstractIrBlackBoxCodegenTest {
+            public class CallableReferences {
                 @Test
                 public void testAllFilesPresentInCallableReferences() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/callableReferences"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -17709,7 +17709,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/contextsAndAccessors")
             @TestDataPath("$PROJECT_ROOT")
-            public class ContextsAndAccessors extends AbstractIrBlackBoxCodegenTest {
+            public class ContextsAndAccessors {
                 @Test
                 @TestMetadata("accessPrivateInlineClassCompanionMethod.kt")
                 public void testAccessPrivateInlineClassCompanionMethod() throws Exception {
@@ -17851,7 +17851,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/defaultParameterValues")
             @TestDataPath("$PROJECT_ROOT")
-            public class DefaultParameterValues extends AbstractIrBlackBoxCodegenTest {
+            public class DefaultParameterValues {
                 @Test
                 public void testAllFilesPresentInDefaultParameterValues() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/defaultParameterValues"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -17933,7 +17933,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/functionNameMangling")
             @TestDataPath("$PROJECT_ROOT")
-            public class FunctionNameMangling extends AbstractIrBlackBoxCodegenTest {
+            public class FunctionNameMangling {
                 @Test
                 public void testAllFilesPresentInFunctionNameMangling() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/functionNameMangling"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18051,7 +18051,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/hiddenConstructor")
             @TestDataPath("$PROJECT_ROOT")
-            public class HiddenConstructor extends AbstractIrBlackBoxCodegenTest {
+            public class HiddenConstructor {
                 @Test
                 public void testAllFilesPresentInHiddenConstructor() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/hiddenConstructor"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18139,7 +18139,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/interfaceDelegation")
             @TestDataPath("$PROJECT_ROOT")
-            public class InterfaceDelegation extends AbstractIrBlackBoxCodegenTest {
+            public class InterfaceDelegation {
                 @Test
                 public void testAllFilesPresentInInterfaceDelegation() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/interfaceDelegation"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18197,7 +18197,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/interfaceMethodCalls")
             @TestDataPath("$PROJECT_ROOT")
-            public class InterfaceMethodCalls extends AbstractIrBlackBoxCodegenTest {
+            public class InterfaceMethodCalls {
                 @Test
                 public void testAllFilesPresentInInterfaceMethodCalls() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/interfaceMethodCalls"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18273,7 +18273,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/javaInterop")
             @TestDataPath("$PROJECT_ROOT")
-            public class JavaInterop extends AbstractIrBlackBoxCodegenTest {
+            public class JavaInterop {
                 @Test
                 public void testAllFilesPresentInJavaInterop() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/javaInterop"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18301,7 +18301,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/jvm8DefaultInterfaceMethods")
             @TestDataPath("$PROJECT_ROOT")
-            public class Jvm8DefaultInterfaceMethods extends AbstractIrBlackBoxCodegenTest {
+            public class Jvm8DefaultInterfaceMethods {
                 @Test
                 public void testAllFilesPresentInJvm8DefaultInterfaceMethods() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/jvm8DefaultInterfaceMethods"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18383,7 +18383,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/propertyDelegation")
             @TestDataPath("$PROJECT_ROOT")
-            public class PropertyDelegation extends AbstractIrBlackBoxCodegenTest {
+            public class PropertyDelegation {
                 @Test
                 public void testAllFilesPresentInPropertyDelegation() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/propertyDelegation"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18465,7 +18465,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/inlineClasses/unboxGenericParameter")
             @TestDataPath("$PROJECT_ROOT")
-            public class UnboxGenericParameter extends AbstractIrBlackBoxCodegenTest {
+            public class UnboxGenericParameter {
                 @Test
                 public void testAllFilesPresentInUnboxGenericParameter() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/unboxGenericParameter"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18474,7 +18474,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/inlineClasses/unboxGenericParameter/funInterface")
                 @TestDataPath("$PROJECT_ROOT")
-                public class FunInterface extends AbstractIrBlackBoxCodegenTest {
+                public class FunInterface {
                     @Test
                     public void testAllFilesPresentInFunInterface() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/unboxGenericParameter/funInterface"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18532,7 +18532,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/inlineClasses/unboxGenericParameter/lambda")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Lambda extends AbstractIrBlackBoxCodegenTest {
+                public class Lambda {
                     @Test
                     public void testAllFilesPresentInLambda() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/unboxGenericParameter/lambda"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18590,7 +18590,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/inlineClasses/unboxGenericParameter/objectLiteral")
                 @TestDataPath("$PROJECT_ROOT")
-                public class ObjectLiteral extends AbstractIrBlackBoxCodegenTest {
+                public class ObjectLiteral {
                     @Test
                     public void testAllFilesPresentInObjectLiteral() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/inlineClasses/unboxGenericParameter/objectLiteral"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18650,7 +18650,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/innerNested")
         @TestDataPath("$PROJECT_ROOT")
-        public class InnerNested extends AbstractIrBlackBoxCodegenTest {
+        public class InnerNested {
             @Test
             public void testAllFilesPresentInInnerNested() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/innerNested"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18827,7 +18827,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/innerNested/superConstructorCall")
             @TestDataPath("$PROJECT_ROOT")
-            public class SuperConstructorCall extends AbstractIrBlackBoxCodegenTest {
+            public class SuperConstructorCall {
                 @Test
                 public void testAllFilesPresentInSuperConstructorCall() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/innerNested/superConstructorCall"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18964,7 +18964,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/instructions")
         @TestDataPath("$PROJECT_ROOT")
-        public class Instructions extends AbstractIrBlackBoxCodegenTest {
+        public class Instructions {
             @Test
             public void testAllFilesPresentInInstructions() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/instructions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18973,7 +18973,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/instructions/swap")
             @TestDataPath("$PROJECT_ROOT")
-            public class Swap extends AbstractIrBlackBoxCodegenTest {
+            public class Swap {
                 @Test
                 public void testAllFilesPresentInSwap() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/instructions/swap"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -18996,7 +18996,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/intrinsics")
         @TestDataPath("$PROJECT_ROOT")
-        public class Intrinsics extends AbstractIrBlackBoxCodegenTest {
+        public class Intrinsics {
             @Test
             public void testAllFilesPresentInIntrinsics() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/intrinsics"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19168,7 +19168,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/ir")
         @TestDataPath("$PROJECT_ROOT")
-        public class Ir extends AbstractIrBlackBoxCodegenTest {
+        public class Ir {
             @Test
             public void testAllFilesPresentInIr() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ir"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19291,7 +19291,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ir/closureConversion")
             @TestDataPath("$PROJECT_ROOT")
-            public class ClosureConversion extends AbstractIrBlackBoxCodegenTest {
+            public class ClosureConversion {
                 @Test
                 public void testAllFilesPresentInClosureConversion() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ir/closureConversion"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19349,7 +19349,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ir/primitiveNumberComparisons")
             @TestDataPath("$PROJECT_ROOT")
-            public class PrimitiveNumberComparisons extends AbstractIrBlackBoxCodegenTest {
+            public class PrimitiveNumberComparisons {
                 @Test
                 public void testAllFilesPresentInPrimitiveNumberComparisons() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ir/primitiveNumberComparisons"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19383,7 +19383,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ir/serializationRegressions")
             @TestDataPath("$PROJECT_ROOT")
-            public class SerializationRegressions extends AbstractIrBlackBoxCodegenTest {
+            public class SerializationRegressions {
                 @Test
                 public void testAllFilesPresentInSerializationRegressions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ir/serializationRegressions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19442,7 +19442,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/javaInterop")
         @TestDataPath("$PROJECT_ROOT")
-        public class JavaInterop extends AbstractIrBlackBoxCodegenTest {
+        public class JavaInterop {
             @Test
             public void testAllFilesPresentInJavaInterop() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/javaInterop"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19505,7 +19505,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/javaInterop/generics")
             @TestDataPath("$PROJECT_ROOT")
-            public class Generics extends AbstractIrBlackBoxCodegenTest {
+            public class Generics {
                 @Test
                 public void testAllFilesPresentInGenerics() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/javaInterop/generics"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19557,7 +19557,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/javaInterop/notNullAssertions")
             @TestDataPath("$PROJECT_ROOT")
-            public class NotNullAssertions extends AbstractIrBlackBoxCodegenTest {
+            public class NotNullAssertions {
                 @Test
                 public void testAllFilesPresentInNotNullAssertions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/javaInterop/notNullAssertions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19692,7 +19692,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/javaInterop/notNullAssertions/enhancedNullability")
                 @TestDataPath("$PROJECT_ROOT")
-                public class EnhancedNullability extends AbstractIrBlackBoxCodegenTest {
+                public class EnhancedNullability {
                     @Test
                     public void testAllFilesPresentInEnhancedNullability() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/javaInterop/notNullAssertions/enhancedNullability"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19750,7 +19750,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/javaInterop/notNullAssertions/nullCheckOnLambdaReturnValue")
                 @TestDataPath("$PROJECT_ROOT")
-                public class NullCheckOnLambdaReturnValue extends AbstractIrBlackBoxCodegenTest {
+                public class NullCheckOnLambdaReturnValue {
                     @Test
                     public void testAllFilesPresentInNullCheckOnLambdaReturnValue() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/javaInterop/notNullAssertions/nullCheckOnLambdaReturnValue"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19821,7 +19821,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/javaInterop/objectMethods")
             @TestDataPath("$PROJECT_ROOT")
-            public class ObjectMethods extends AbstractIrBlackBoxCodegenTest {
+            public class ObjectMethods {
                 @Test
                 public void testAllFilesPresentInObjectMethods() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/javaInterop/objectMethods"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19868,7 +19868,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/jdk")
         @TestDataPath("$PROJECT_ROOT")
-        public class Jdk extends AbstractIrBlackBoxCodegenTest {
+        public class Jdk {
             @Test
             public void testAllFilesPresentInJdk() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jdk"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -19926,7 +19926,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/jvm8")
         @TestDataPath("$PROJECT_ROOT")
-        public class Jvm8 extends AbstractIrBlackBoxCodegenTest {
+        public class Jvm8 {
             @Test
             public void testAllFilesPresentInJvm8() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20067,7 +20067,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/jvm8/defaults")
             @TestDataPath("$PROJECT_ROOT")
-            public class Defaults extends AbstractIrBlackBoxCodegenTest {
+            public class Defaults {
                 @Test
                 @TestMetadata("accessor.kt")
                 public void testAccessor() throws Exception {
@@ -20256,7 +20256,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/jvm8/defaults/allCompatibility")
                 @TestDataPath("$PROJECT_ROOT")
-                public class AllCompatibility extends AbstractIrBlackBoxCodegenTest {
+                public class AllCompatibility {
                     @Test
                     @TestMetadata("accessor.kt")
                     public void testAccessor() throws Exception {
@@ -20433,7 +20433,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/jvm8/defaults/allCompatibility/delegationBy")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class DelegationBy extends AbstractIrBlackBoxCodegenTest {
+                    public class DelegationBy {
                         @Test
                         public void testAllFilesPresentInDelegationBy() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/defaults/allCompatibility/delegationBy"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20456,7 +20456,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/jvm8/defaults/compatibility")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Compatibility extends AbstractIrBlackBoxCodegenTest {
+                public class Compatibility {
                     @Test
                     public void testAllFilesPresentInCompatibility() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/defaults/compatibility"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20562,7 +20562,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/jvm8/defaults/delegationBy")
                 @TestDataPath("$PROJECT_ROOT")
-                public class DelegationBy extends AbstractIrBlackBoxCodegenTest {
+                public class DelegationBy {
                     @Test
                     public void testAllFilesPresentInDelegationBy() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/defaults/delegationBy"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20584,7 +20584,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/jvm8/defaults/noDefaultImpls")
                 @TestDataPath("$PROJECT_ROOT")
-                public class NoDefaultImpls extends AbstractIrBlackBoxCodegenTest {
+                public class NoDefaultImpls {
                     @Test
                     @TestMetadata("accessor.kt")
                     public void testAccessor() throws Exception {
@@ -20755,7 +20755,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/jvm8/defaults/noDefaultImpls/delegationBy")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class DelegationBy extends AbstractIrBlackBoxCodegenTest {
+                    public class DelegationBy {
                         @Test
                         public void testAllFilesPresentInDelegationBy() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/defaults/noDefaultImpls/delegationBy"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20777,7 +20777,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/jvm8/defaults/noDefaultImpls/specialization")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Specialization extends AbstractIrBlackBoxCodegenTest {
+                    public class Specialization {
                         @Test
                         public void testAllFilesPresentInSpecialization() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/defaults/noDefaultImpls/specialization"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20794,7 +20794,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/jvm8/defaults/noDelegation")
                 @TestDataPath("$PROJECT_ROOT")
-                public class NoDelegation extends AbstractIrBlackBoxCodegenTest {
+                public class NoDelegation {
                     @Test
                     public void testAllFilesPresentInNoDelegation() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/defaults/noDelegation"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20822,7 +20822,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/jvm8/defaults/reflection")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Reflection extends AbstractIrBlackBoxCodegenTest {
+                public class Reflection {
                     @Test
                     public void testAllFilesPresentInReflection() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/defaults/reflection"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20839,7 +20839,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/jvm8/interfaceFlag")
             @TestDataPath("$PROJECT_ROOT")
-            public class InterfaceFlag extends AbstractIrBlackBoxCodegenTest {
+            public class InterfaceFlag {
                 @Test
                 public void testAllFilesPresentInInterfaceFlag() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/interfaceFlag"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20861,7 +20861,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/jvm8/javaDefaults")
             @TestDataPath("$PROJECT_ROOT")
-            public class JavaDefaults extends AbstractIrBlackBoxCodegenTest {
+            public class JavaDefaults {
                 @Test
                 public void testAllFilesPresentInJavaDefaults() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvm8/javaDefaults"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -20956,7 +20956,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/jvmField")
         @TestDataPath("$PROJECT_ROOT")
-        public class JvmField extends AbstractIrBlackBoxCodegenTest {
+        public class JvmField {
             @Test
             public void testAllFilesPresentInJvmField() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvmField"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -21116,7 +21116,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/jvmName")
         @TestDataPath("$PROJECT_ROOT")
-        public class JvmName extends AbstractIrBlackBoxCodegenTest {
+        public class JvmName {
             @Test
             public void testAllFilesPresentInJvmName() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvmName"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -21221,7 +21221,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/jvmName/fileFacades")
             @TestDataPath("$PROJECT_ROOT")
-            public class FileFacades extends AbstractIrBlackBoxCodegenTest {
+            public class FileFacades {
                 @Test
                 public void testAllFilesPresentInFileFacades() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvmName/fileFacades"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -21250,7 +21250,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/jvmOverloads")
         @TestDataPath("$PROJECT_ROOT")
-        public class JvmOverloads extends AbstractIrBlackBoxCodegenTest {
+        public class JvmOverloads {
             @Test
             public void testAllFilesPresentInJvmOverloads() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvmOverloads"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -21380,7 +21380,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/jvmPackageName")
         @TestDataPath("$PROJECT_ROOT")
-        public class JvmPackageName extends AbstractIrBlackBoxCodegenTest {
+        public class JvmPackageName {
             @Test
             public void testAllFilesPresentInJvmPackageName() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvmPackageName"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -21420,7 +21420,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/jvmStatic")
         @TestDataPath("$PROJECT_ROOT")
-        public class JvmStatic extends AbstractIrBlackBoxCodegenTest {
+        public class JvmStatic {
             @Test
             public void testAllFilesPresentInJvmStatic() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/jvmStatic"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -21628,7 +21628,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/labels")
         @TestDataPath("$PROJECT_ROOT")
-        public class Labels extends AbstractIrBlackBoxCodegenTest {
+        public class Labels {
             @Test
             public void testAllFilesPresentInLabels() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/labels"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -21686,7 +21686,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/lazyCodegen")
         @TestDataPath("$PROJECT_ROOT")
-        public class LazyCodegen extends AbstractIrBlackBoxCodegenTest {
+        public class LazyCodegen {
             @Test
             public void testAllFilesPresentInLazyCodegen() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/lazyCodegen"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -21749,7 +21749,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/lazyCodegen/optimizations")
             @TestDataPath("$PROJECT_ROOT")
-            public class Optimizations extends AbstractIrBlackBoxCodegenTest {
+            public class Optimizations {
                 @Test
                 public void testAllFilesPresentInOptimizations() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/lazyCodegen/optimizations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -21814,7 +21814,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/localClasses")
         @TestDataPath("$PROJECT_ROOT")
-        public class LocalClasses extends AbstractIrBlackBoxCodegenTest {
+        public class LocalClasses {
             @Test
             public void testAllFilesPresentInLocalClasses() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/localClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22046,7 +22046,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/mangling")
         @TestDataPath("$PROJECT_ROOT")
-        public class Mangling extends AbstractIrBlackBoxCodegenTest {
+        public class Mangling {
             @Test
             public void testAllFilesPresentInMangling() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/mangling"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22110,7 +22110,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/mixedNamedPosition")
         @TestDataPath("$PROJECT_ROOT")
-        public class MixedNamedPosition extends AbstractIrBlackBoxCodegenTest {
+        public class MixedNamedPosition {
             @Test
             public void testAllFilesPresentInMixedNamedPosition() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/mixedNamedPosition"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22144,7 +22144,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/multiDecl")
         @TestDataPath("$PROJECT_ROOT")
-        public class MultiDecl extends AbstractIrBlackBoxCodegenTest {
+        public class MultiDecl {
             @Test
             public void testAllFilesPresentInMultiDecl() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22237,7 +22237,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/multiDecl/forIterator")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForIterator extends AbstractIrBlackBoxCodegenTest {
+            public class ForIterator {
                 @Test
                 public void testAllFilesPresentInForIterator() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forIterator"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22276,7 +22276,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/multiDecl/forIterator/longIterator")
                 @TestDataPath("$PROJECT_ROOT")
-                public class LongIterator extends AbstractIrBlackBoxCodegenTest {
+                public class LongIterator {
                     @Test
                     public void testAllFilesPresentInLongIterator() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forIterator/longIterator"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22311,7 +22311,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/multiDecl/forRange")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForRange extends AbstractIrBlackBoxCodegenTest {
+            public class ForRange {
                 @Test
                 public void testAllFilesPresentInForRange() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forRange"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22362,7 +22362,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeTo")
                 @TestDataPath("$PROJECT_ROOT")
-                public class ExplicitRangeTo extends AbstractIrBlackBoxCodegenTest {
+                public class ExplicitRangeTo {
                     @Test
                     public void testAllFilesPresentInExplicitRangeTo() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22401,7 +22401,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeTo/int")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Int extends AbstractIrBlackBoxCodegenTest {
+                    public class Int {
                         @Test
                         public void testAllFilesPresentInInt() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeTo/int"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22435,7 +22435,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeTo/long")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Long extends AbstractIrBlackBoxCodegenTest {
+                    public class Long {
                         @Test
                         public void testAllFilesPresentInLong() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeTo/long"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22470,7 +22470,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeToWithDot")
                 @TestDataPath("$PROJECT_ROOT")
-                public class ExplicitRangeToWithDot extends AbstractIrBlackBoxCodegenTest {
+                public class ExplicitRangeToWithDot {
                     @Test
                     public void testAllFilesPresentInExplicitRangeToWithDot() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeToWithDot"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22509,7 +22509,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeToWithDot/int")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Int extends AbstractIrBlackBoxCodegenTest {
+                    public class Int {
                         @Test
                         public void testAllFilesPresentInInt() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeToWithDot/int"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22543,7 +22543,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeToWithDot/long")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Long extends AbstractIrBlackBoxCodegenTest {
+                    public class Long {
                         @Test
                         public void testAllFilesPresentInLong() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forRange/explicitRangeToWithDot/long"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22578,7 +22578,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/multiDecl/forRange/int")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Int extends AbstractIrBlackBoxCodegenTest {
+                public class Int {
                     @Test
                     public void testAllFilesPresentInInt() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forRange/int"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22612,7 +22612,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/multiDecl/forRange/long")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Long extends AbstractIrBlackBoxCodegenTest {
+                public class Long {
                     @Test
                     public void testAllFilesPresentInLong() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiDecl/forRange/long"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22648,7 +22648,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/multifileClasses")
         @TestDataPath("$PROJECT_ROOT")
-        public class MultifileClasses extends AbstractIrBlackBoxCodegenTest {
+        public class MultifileClasses {
             @Test
             public void testAllFilesPresentInMultifileClasses() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multifileClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22741,7 +22741,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/multifileClasses/optimized")
             @TestDataPath("$PROJECT_ROOT")
-            public class Optimized extends AbstractIrBlackBoxCodegenTest {
+            public class Optimized {
                 @Test
                 public void testAllFilesPresentInOptimized() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multifileClasses/optimized"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22818,7 +22818,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/multiplatform")
         @TestDataPath("$PROJECT_ROOT")
-        public class Multiplatform extends AbstractIrBlackBoxCodegenTest {
+        public class Multiplatform {
             @Test
             public void testAllFilesPresentInMultiplatform() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiplatform"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -22857,7 +22857,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/multiplatform/defaultArguments")
             @TestDataPath("$PROJECT_ROOT")
-            public class DefaultArguments extends AbstractIrBlackBoxCodegenTest {
+            public class DefaultArguments {
                 @Test
                 public void testAllFilesPresentInDefaultArguments() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiplatform/defaultArguments"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -23005,7 +23005,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/multiplatform/multiModule")
             @TestDataPath("$PROJECT_ROOT")
-            public class MultiModule extends AbstractIrBlackBoxCodegenTest {
+            public class MultiModule {
                 @Test
                 public void testAllFilesPresentInMultiModule() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/multiplatform/multiModule"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -23016,7 +23016,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/nonLocalReturns")
         @TestDataPath("$PROJECT_ROOT")
-        public class NonLocalReturns extends AbstractIrBlackBoxCodegenTest {
+        public class NonLocalReturns {
             @Test
             public void testAllFilesPresentInNonLocalReturns() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/nonLocalReturns"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -23062,7 +23062,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/nothingValue")
         @TestDataPath("$PROJECT_ROOT")
-        public class NothingValue extends AbstractIrBlackBoxCodegenTest {
+        public class NothingValue {
             @Test
             public void testAllFilesPresentInNothingValue() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/nothingValue"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -23084,7 +23084,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/nullCheckOptimization")
         @TestDataPath("$PROJECT_ROOT")
-        public class NullCheckOptimization extends AbstractIrBlackBoxCodegenTest {
+        public class NullCheckOptimization {
             @Test
             public void testAllFilesPresentInNullCheckOptimization() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/nullCheckOptimization"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -23166,7 +23166,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/objectIntrinsics")
         @TestDataPath("$PROJECT_ROOT")
-        public class ObjectIntrinsics extends AbstractIrBlackBoxCodegenTest {
+        public class ObjectIntrinsics {
             @Test
             public void testAllFilesPresentInObjectIntrinsics() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/objectIntrinsics"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -23182,7 +23182,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/objects")
         @TestDataPath("$PROJECT_ROOT")
-        public class Objects extends AbstractIrBlackBoxCodegenTest {
+        public class Objects {
             @Test
             public void testAllFilesPresentInObjects() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/objects"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -23635,7 +23635,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/objects/companionObjectAccess")
             @TestDataPath("$PROJECT_ROOT")
-            public class CompanionObjectAccess extends AbstractIrBlackBoxCodegenTest {
+            public class CompanionObjectAccess {
                 @Test
                 public void testAllFilesPresentInCompanionObjectAccess() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/objects/companionObjectAccess"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -23740,7 +23740,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/objects/companionObjectAccess/multipleCompanionsWithAccessors")
                 @TestDataPath("$PROJECT_ROOT")
-                public class MultipleCompanionsWithAccessors extends AbstractIrBlackBoxCodegenTest {
+                public class MultipleCompanionsWithAccessors {
                     @Test
                     @TestMetadata("accessFromInlineLambda.kt")
                     public void testAccessFromInlineLambda() throws Exception {
@@ -23822,7 +23822,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/objects/companionObjectAccess/primitiveCompanion")
                 @TestDataPath("$PROJECT_ROOT")
-                public class PrimitiveCompanion extends AbstractIrBlackBoxCodegenTest {
+                public class PrimitiveCompanion {
                     @Test
                     public void testAllFilesPresentInPrimitiveCompanion() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/objects/companionObjectAccess/primitiveCompanion"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -23876,7 +23876,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/operatorConventions")
         @TestDataPath("$PROJECT_ROOT")
-        public class OperatorConventions extends AbstractIrBlackBoxCodegenTest {
+        public class OperatorConventions {
             @Test
             public void testAllFilesPresentInOperatorConventions() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/operatorConventions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24005,7 +24005,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/operatorConventions/compareTo")
             @TestDataPath("$PROJECT_ROOT")
-            public class CompareTo extends AbstractIrBlackBoxCodegenTest {
+            public class CompareTo {
                 @Test
                 public void testAllFilesPresentInCompareTo() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/operatorConventions/compareTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24082,7 +24082,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/optimizations")
         @TestDataPath("$PROJECT_ROOT")
-        public class Optimizations extends AbstractIrBlackBoxCodegenTest {
+        public class Optimizations {
             @Test
             public void testAllFilesPresentInOptimizations() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/optimizations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24104,7 +24104,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/package")
         @TestDataPath("$PROJECT_ROOT")
-        public class Package extends AbstractIrBlackBoxCodegenTest {
+        public class Package {
             @Test
             public void testAllFilesPresentInPackage() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/package"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24186,7 +24186,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/parametersMetadata")
         @TestDataPath("$PROJECT_ROOT")
-        public class ParametersMetadata extends AbstractIrBlackBoxCodegenTest {
+        public class ParametersMetadata {
             @Test
             public void testAllFilesPresentInParametersMetadata() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/parametersMetadata"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24256,7 +24256,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/platformTypes")
         @TestDataPath("$PROJECT_ROOT")
-        public class PlatformTypes extends AbstractIrBlackBoxCodegenTest {
+        public class PlatformTypes {
             @Test
             public void testAllFilesPresentInPlatformTypes() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/platformTypes"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24283,7 +24283,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/platformTypes/primitives")
             @TestDataPath("$PROJECT_ROOT")
-            public class Primitives extends AbstractIrBlackBoxCodegenTest {
+            public class Primitives {
                 @Test
                 public void testAllFilesPresentInPrimitives() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/platformTypes/primitives"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24420,7 +24420,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/polymorphicSignature")
         @TestDataPath("$PROJECT_ROOT")
-        public class PolymorphicSignature extends AbstractIrBlackBoxCodegenTest {
+        public class PolymorphicSignature {
             @Test
             public void testAllFilesPresentInPolymorphicSignature() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/polymorphicSignature"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24478,7 +24478,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/primitiveTypes")
         @TestDataPath("$PROJECT_ROOT")
-        public class PrimitiveTypes extends AbstractIrBlackBoxCodegenTest {
+        public class PrimitiveTypes {
             @Test
             public void testAllFilesPresentInPrimitiveTypes() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/primitiveTypes"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24841,7 +24841,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/primitiveTypes/equalityWithObject")
             @TestDataPath("$PROJECT_ROOT")
-            public class EqualityWithObject extends AbstractIrBlackBoxCodegenTest {
+            public class EqualityWithObject {
                 @Test
                 public void testAllFilesPresentInEqualityWithObject() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/primitiveTypes/equalityWithObject"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -24904,7 +24904,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/primitiveTypes/equalityWithObject/generated")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Generated extends AbstractIrBlackBoxCodegenTest {
+                public class Generated {
                     @Test
                     public void testAllFilesPresentInGenerated() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/primitiveTypes/equalityWithObject/generated"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -25024,7 +25024,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/private")
         @TestDataPath("$PROJECT_ROOT")
-        public class Private extends AbstractIrBlackBoxCodegenTest {
+        public class Private {
             @Test
             public void testAllFilesPresentInPrivate() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/private"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -25046,7 +25046,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/privateConstructors")
         @TestDataPath("$PROJECT_ROOT")
-        public class PrivateConstructors extends AbstractIrBlackBoxCodegenTest {
+        public class PrivateConstructors {
             @Test
             public void testAllFilesPresentInPrivateConstructors() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/privateConstructors"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -25134,7 +25134,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/properties")
         @TestDataPath("$PROJECT_ROOT")
-        public class Properties extends AbstractIrBlackBoxCodegenTest {
+        public class Properties {
             @Test
             @TestMetadata("accessToPrivateProperty.kt")
             public void testAccessToPrivateProperty() throws Exception {
@@ -25653,7 +25653,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/properties/const")
             @TestDataPath("$PROJECT_ROOT")
-            public class Const extends AbstractIrBlackBoxCodegenTest {
+            public class Const {
                 @Test
                 public void testAllFilesPresentInConst() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/properties/const"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -25711,7 +25711,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/properties/lateinit")
             @TestDataPath("$PROJECT_ROOT")
-            public class Lateinit extends AbstractIrBlackBoxCodegenTest {
+            public class Lateinit {
                 @Test
                 @TestMetadata("accessor.kt")
                 public void testAccessor() throws Exception {
@@ -25810,7 +25810,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/properties/lateinit/isInitializedAndDeinitialize")
                 @TestDataPath("$PROJECT_ROOT")
-                public class IsInitializedAndDeinitialize extends AbstractIrBlackBoxCodegenTest {
+                public class IsInitializedAndDeinitialize {
                     @Test
                     public void testAllFilesPresentInIsInitializedAndDeinitialize() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/properties/lateinit/isInitializedAndDeinitialize"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -25874,7 +25874,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/properties/lateinit/local")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Local extends AbstractIrBlackBoxCodegenTest {
+                public class Local {
                     @Test
                     public void testAllFilesPresentInLocal() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/properties/lateinit/local"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -25926,7 +25926,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/properties/lateinit/topLevel")
                 @TestDataPath("$PROJECT_ROOT")
-                public class TopLevel extends AbstractIrBlackBoxCodegenTest {
+                public class TopLevel {
                     @Test
                     @TestMetadata("accessorException.kt")
                     public void testAccessorException() throws Exception {
@@ -25968,7 +25968,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/publishedApi")
         @TestDataPath("$PROJECT_ROOT")
-        public class PublishedApi extends AbstractIrBlackBoxCodegenTest {
+        public class PublishedApi {
             @Test
             public void testAllFilesPresentInPublishedApi() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/publishedApi"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -25996,7 +25996,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/ranges")
         @TestDataPath("$PROJECT_ROOT")
-        public class Ranges extends AbstractIrBlackBoxCodegenTest {
+        public class Ranges {
             @Test
             public void testAllFilesPresentInRanges() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26107,7 +26107,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/contains")
             @TestDataPath("$PROJECT_ROOT")
-            public class Contains extends AbstractIrBlackBoxCodegenTest {
+            public class Contains {
                 @Test
                 public void testAllFilesPresentInContains() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/contains"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26356,7 +26356,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/ranges/contains/generated")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Generated extends AbstractIrBlackBoxCodegenTest {
+                public class Generated {
                     @Test
                     public void testAllFilesPresentInGenerated() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/contains/generated"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26451,7 +26451,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/evaluationOrder")
             @TestDataPath("$PROJECT_ROOT")
-            public class EvaluationOrder extends AbstractIrBlackBoxCodegenTest {
+            public class EvaluationOrder {
                 @Test
                 public void testAllFilesPresentInEvaluationOrder() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/evaluationOrder"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26514,7 +26514,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/ranges/evaluationOrder/stepped")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Stepped extends AbstractIrBlackBoxCodegenTest {
+                public class Stepped {
                     @Test
                     public void testAllFilesPresentInStepped() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/evaluationOrder/stepped"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26523,7 +26523,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/evaluationOrder/stepped/forInDownTo")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class ForInDownTo extends AbstractIrBlackBoxCodegenTest {
+                    public class ForInDownTo {
                         @Test
                         public void testAllFilesPresentInForInDownTo() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/evaluationOrder/stepped/forInDownTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26581,7 +26581,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/evaluationOrder/stepped/forInRangeLiteral")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class ForInRangeLiteral extends AbstractIrBlackBoxCodegenTest {
+                    public class ForInRangeLiteral {
                         @Test
                         public void testAllFilesPresentInForInRangeLiteral() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/evaluationOrder/stepped/forInRangeLiteral"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26639,7 +26639,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/evaluationOrder/stepped/forInUntil")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class ForInUntil extends AbstractIrBlackBoxCodegenTest {
+                    public class ForInUntil {
                         @Test
                         public void testAllFilesPresentInForInUntil() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/evaluationOrder/stepped/forInUntil"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26699,7 +26699,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/expression")
             @TestDataPath("$PROJECT_ROOT")
-            public class Expression extends AbstractIrBlackBoxCodegenTest {
+            public class Expression {
                 @Test
                 public void testAllFilesPresentInExpression() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/expression"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26889,7 +26889,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/forInDownTo")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInDownTo extends AbstractIrBlackBoxCodegenTest {
+            public class ForInDownTo {
                 @Test
                 public void testAllFilesPresentInForInDownTo() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/forInDownTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -26929,7 +26929,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/forInIndices")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInIndices extends AbstractIrBlackBoxCodegenTest {
+            public class ForInIndices {
                 @Test
                 public void testAllFilesPresentInForInIndices() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/forInIndices"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27065,7 +27065,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/forInProgressionWithIndex")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInProgressionWithIndex extends AbstractIrBlackBoxCodegenTest {
+            public class ForInProgressionWithIndex {
                 @Test
                 public void testAllFilesPresentInForInProgressionWithIndex() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/forInProgressionWithIndex"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27165,7 +27165,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/forInReversed")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInReversed extends AbstractIrBlackBoxCodegenTest {
+            public class ForInReversed {
                 @Test
                 public void testAllFilesPresentInForInReversed() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/forInReversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27283,7 +27283,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/forInUntil")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForInUntil extends AbstractIrBlackBoxCodegenTest {
+            public class ForInUntil {
                 @Test
                 public void testAllFilesPresentInForInUntil() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/forInUntil"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27383,7 +27383,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/forWithPossibleOverflow")
             @TestDataPath("$PROJECT_ROOT")
-            public class ForWithPossibleOverflow extends AbstractIrBlackBoxCodegenTest {
+            public class ForWithPossibleOverflow {
                 @Test
                 public void testAllFilesPresentInForWithPossibleOverflow() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/forWithPossibleOverflow"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27471,7 +27471,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/javaInterop")
             @TestDataPath("$PROJECT_ROOT")
-            public class JavaInterop extends AbstractIrBlackBoxCodegenTest {
+            public class JavaInterop {
                 @Test
                 public void testAllFilesPresentInJavaInterop() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/javaInterop"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27594,7 +27594,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/ranges/javaInterop/withIndex")
                 @TestDataPath("$PROJECT_ROOT")
-                public class WithIndex extends AbstractIrBlackBoxCodegenTest {
+                public class WithIndex {
                     @Test
                     public void testAllFilesPresentInWithIndex() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/javaInterop/withIndex"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27683,7 +27683,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/literal")
             @TestDataPath("$PROJECT_ROOT")
-            public class Literal extends AbstractIrBlackBoxCodegenTest {
+            public class Literal {
                 @Test
                 public void testAllFilesPresentInLiteral() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/literal"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27873,7 +27873,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/nullableLoopParameter")
             @TestDataPath("$PROJECT_ROOT")
-            public class NullableLoopParameter extends AbstractIrBlackBoxCodegenTest {
+            public class NullableLoopParameter {
                 @Test
                 public void testAllFilesPresentInNullableLoopParameter() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/nullableLoopParameter"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27901,7 +27901,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/stepped")
             @TestDataPath("$PROJECT_ROOT")
-            public class Stepped extends AbstractIrBlackBoxCodegenTest {
+            public class Stepped {
                 @Test
                 public void testAllFilesPresentInStepped() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27910,7 +27910,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Expression extends AbstractIrBlackBoxCodegenTest {
+                public class Expression {
                     @Test
                     public void testAllFilesPresentInExpression() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -27919,7 +27919,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression/downTo")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class DownTo extends AbstractIrBlackBoxCodegenTest {
+                    public class DownTo {
                         @Test
                         public void testAllFilesPresentInDownTo() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression/downTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28024,7 +28024,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression/downTo/nestedStep")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                        public class NestedStep {
                             @Test
                             public void testAllFilesPresentInNestedStep() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression/downTo/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28082,7 +28082,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression/downTo/reversed")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                        public class Reversed {
                             @Test
                             public void testAllFilesPresentInReversed() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression/downTo/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28129,7 +28129,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression/rangeTo")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class RangeTo extends AbstractIrBlackBoxCodegenTest {
+                    public class RangeTo {
                         @Test
                         public void testAllFilesPresentInRangeTo() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression/rangeTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28234,7 +28234,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression/rangeTo/nestedStep")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                        public class NestedStep {
                             @Test
                             public void testAllFilesPresentInNestedStep() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression/rangeTo/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28292,7 +28292,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression/rangeTo/reversed")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                        public class Reversed {
                             @Test
                             public void testAllFilesPresentInReversed() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression/rangeTo/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28339,7 +28339,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression/until")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Until extends AbstractIrBlackBoxCodegenTest {
+                    public class Until {
                         @Test
                         public void testAllFilesPresentInUntil() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression/until"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28450,7 +28450,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression/until/nestedStep")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                        public class NestedStep {
                             @Test
                             public void testAllFilesPresentInNestedStep() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression/until/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28508,7 +28508,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/expression/until/reversed")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                        public class Reversed {
                             @Test
                             public void testAllFilesPresentInReversed() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/expression/until/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28556,7 +28556,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Literal extends AbstractIrBlackBoxCodegenTest {
+                public class Literal {
                     @Test
                     public void testAllFilesPresentInLiteral() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28565,7 +28565,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal/downTo")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class DownTo extends AbstractIrBlackBoxCodegenTest {
+                    public class DownTo {
                         @Test
                         public void testAllFilesPresentInDownTo() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal/downTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28670,7 +28670,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal/downTo/nestedStep")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                        public class NestedStep {
                             @Test
                             public void testAllFilesPresentInNestedStep() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal/downTo/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28728,7 +28728,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal/downTo/reversed")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                        public class Reversed {
                             @Test
                             public void testAllFilesPresentInReversed() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal/downTo/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28775,7 +28775,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal/rangeTo")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class RangeTo extends AbstractIrBlackBoxCodegenTest {
+                    public class RangeTo {
                         @Test
                         public void testAllFilesPresentInRangeTo() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal/rangeTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28880,7 +28880,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal/rangeTo/nestedStep")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                        public class NestedStep {
                             @Test
                             public void testAllFilesPresentInNestedStep() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal/rangeTo/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28938,7 +28938,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal/rangeTo/reversed")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                        public class Reversed {
                             @Test
                             public void testAllFilesPresentInReversed() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal/rangeTo/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -28985,7 +28985,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal/until")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Until extends AbstractIrBlackBoxCodegenTest {
+                    public class Until {
                         @Test
                         public void testAllFilesPresentInUntil() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal/until"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29096,7 +29096,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal/until/nestedStep")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                        public class NestedStep {
                             @Test
                             public void testAllFilesPresentInNestedStep() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal/until/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29154,7 +29154,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/literal/until/reversed")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                        public class Reversed {
                             @Test
                             public void testAllFilesPresentInReversed() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/literal/until/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29202,7 +29202,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Unsigned extends AbstractIrBlackBoxCodegenTest {
+                public class Unsigned {
                     @Test
                     public void testAllFilesPresentInUnsigned() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29211,7 +29211,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Expression extends AbstractIrBlackBoxCodegenTest {
+                    public class Expression {
                         @Test
                         public void testAllFilesPresentInExpression() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29220,7 +29220,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/downTo")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class DownTo extends AbstractIrBlackBoxCodegenTest {
+                        public class DownTo {
                             @Test
                             public void testAllFilesPresentInDownTo() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/downTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29325,7 +29325,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/downTo/nestedStep")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                            public class NestedStep {
                                 @Test
                                 public void testAllFilesPresentInNestedStep() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/downTo/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29383,7 +29383,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/downTo/reversed")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                            public class Reversed {
                                 @Test
                                 public void testAllFilesPresentInReversed() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/downTo/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29430,7 +29430,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/rangeTo")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class RangeTo extends AbstractIrBlackBoxCodegenTest {
+                        public class RangeTo {
                             @Test
                             public void testAllFilesPresentInRangeTo() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/rangeTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29535,7 +29535,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/rangeTo/nestedStep")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                            public class NestedStep {
                                 @Test
                                 public void testAllFilesPresentInNestedStep() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/rangeTo/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29593,7 +29593,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/rangeTo/reversed")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                            public class Reversed {
                                 @Test
                                 public void testAllFilesPresentInReversed() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/rangeTo/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29640,7 +29640,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/until")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class Until extends AbstractIrBlackBoxCodegenTest {
+                        public class Until {
                             @Test
                             public void testAllFilesPresentInUntil() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/until"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29751,7 +29751,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/until/nestedStep")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                            public class NestedStep {
                                 @Test
                                 public void testAllFilesPresentInNestedStep() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/until/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29809,7 +29809,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/until/reversed")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                            public class Reversed {
                                 @Test
                                 public void testAllFilesPresentInReversed() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/expression/until/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29857,7 +29857,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class Literal extends AbstractIrBlackBoxCodegenTest {
+                    public class Literal {
                         @Test
                         public void testAllFilesPresentInLiteral() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29866,7 +29866,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/downTo")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class DownTo extends AbstractIrBlackBoxCodegenTest {
+                        public class DownTo {
                             @Test
                             public void testAllFilesPresentInDownTo() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/downTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -29971,7 +29971,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/downTo/nestedStep")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                            public class NestedStep {
                                 @Test
                                 public void testAllFilesPresentInNestedStep() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/downTo/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30029,7 +30029,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/downTo/reversed")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                            public class Reversed {
                                 @Test
                                 public void testAllFilesPresentInReversed() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/downTo/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30076,7 +30076,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/rangeTo")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class RangeTo extends AbstractIrBlackBoxCodegenTest {
+                        public class RangeTo {
                             @Test
                             public void testAllFilesPresentInRangeTo() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/rangeTo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30181,7 +30181,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/rangeTo/nestedStep")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                            public class NestedStep {
                                 @Test
                                 public void testAllFilesPresentInNestedStep() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/rangeTo/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30239,7 +30239,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/rangeTo/reversed")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                            public class Reversed {
                                 @Test
                                 public void testAllFilesPresentInReversed() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/rangeTo/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30286,7 +30286,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                         @Nested
                         @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/until")
                         @TestDataPath("$PROJECT_ROOT")
-                        public class Until extends AbstractIrBlackBoxCodegenTest {
+                        public class Until {
                             @Test
                             public void testAllFilesPresentInUntil() throws Exception {
                                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/until"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30397,7 +30397,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/until/nestedStep")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class NestedStep extends AbstractIrBlackBoxCodegenTest {
+                            public class NestedStep {
                                 @Test
                                 public void testAllFilesPresentInNestedStep() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/until/nestedStep"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30455,7 +30455,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                             @Nested
                             @TestMetadata("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/until/reversed")
                             @TestDataPath("$PROJECT_ROOT")
-                            public class Reversed extends AbstractIrBlackBoxCodegenTest {
+                            public class Reversed {
                                 @Test
                                 public void testAllFilesPresentInReversed() throws Exception {
                                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/stepped/unsigned/literal/until/reversed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30505,7 +30505,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/ranges/unsigned")
             @TestDataPath("$PROJECT_ROOT")
-            public class Unsigned extends AbstractIrBlackBoxCodegenTest {
+            public class Unsigned {
                 @Test
                 public void testAllFilesPresentInUnsigned() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/unsigned"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30544,7 +30544,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/ranges/unsigned/expression")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Expression extends AbstractIrBlackBoxCodegenTest {
+                public class Expression {
                     @Test
                     public void testAllFilesPresentInExpression() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/unsigned/expression"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30734,7 +30734,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/ranges/unsigned/literal")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Literal extends AbstractIrBlackBoxCodegenTest {
+                public class Literal {
                     @Test
                     public void testAllFilesPresentInLiteral() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/unsigned/literal"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30924,7 +30924,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/ranges/unsigned/nullableLoopParameter")
                 @TestDataPath("$PROJECT_ROOT")
-                public class NullableLoopParameter extends AbstractIrBlackBoxCodegenTest {
+                public class NullableLoopParameter {
                     @Test
                     public void testAllFilesPresentInNullableLoopParameter() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/ranges/unsigned/nullableLoopParameter"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30954,7 +30954,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/reflection")
         @TestDataPath("$PROJECT_ROOT")
-        public class Reflection extends AbstractIrBlackBoxCodegenTest {
+        public class Reflection {
             @Test
             public void testAllFilesPresentInReflection() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -30963,7 +30963,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/annotations")
             @TestDataPath("$PROJECT_ROOT")
-            public class Annotations extends AbstractIrBlackBoxCodegenTest {
+            public class Annotations {
                 @Test
                 public void testAllFilesPresentInAnnotations() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/annotations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31086,7 +31086,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/annotations/onTypes")
                 @TestDataPath("$PROJECT_ROOT")
-                public class OnTypes extends AbstractIrBlackBoxCodegenTest {
+                public class OnTypes {
                     @Test
                     public void testAllFilesPresentInOnTypes() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/annotations/onTypes"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31121,7 +31121,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/builtins")
             @TestDataPath("$PROJECT_ROOT")
-            public class Builtins extends AbstractIrBlackBoxCodegenTest {
+            public class Builtins {
                 @Test
                 public void testAllFilesPresentInBuiltins() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/builtins"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31149,7 +31149,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/call")
             @TestDataPath("$PROJECT_ROOT")
-            public class Call extends AbstractIrBlackBoxCodegenTest {
+            public class Call {
                 @Test
                 public void testAllFilesPresentInCall() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/call"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31302,7 +31302,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/call/bound")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Bound extends AbstractIrBlackBoxCodegenTest {
+                public class Bound {
                     @Test
                     public void testAllFilesPresentInBound() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/call/bound"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31390,7 +31390,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/call/inlineClasses")
                 @TestDataPath("$PROJECT_ROOT")
-                public class InlineClasses extends AbstractIrBlackBoxCodegenTest {
+                public class InlineClasses {
                     @Test
                     public void testAllFilesPresentInInlineClasses() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/call/inlineClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31485,7 +31485,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/callBy")
             @TestDataPath("$PROJECT_ROOT")
-            public class CallBy extends AbstractIrBlackBoxCodegenTest {
+            public class CallBy {
                 @Test
                 public void testAllFilesPresentInCallBy() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/callBy"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31651,7 +31651,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/classLiterals")
             @TestDataPath("$PROJECT_ROOT")
-            public class ClassLiterals extends AbstractIrBlackBoxCodegenTest {
+            public class ClassLiterals {
                 @Test
                 public void testAllFilesPresentInClassLiterals() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/classLiterals"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31715,7 +31715,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/classes")
             @TestDataPath("$PROJECT_ROOT")
-            public class Classes extends AbstractIrBlackBoxCodegenTest {
+            public class Classes {
                 @Test
                 public void testAllFilesPresentInClasses() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/classes"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31821,7 +31821,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/constructors")
             @TestDataPath("$PROJECT_ROOT")
-            public class Constructors extends AbstractIrBlackBoxCodegenTest {
+            public class Constructors {
                 @Test
                 public void testAllFilesPresentInConstructors() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/constructors"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31867,7 +31867,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/createAnnotation")
             @TestDataPath("$PROJECT_ROOT")
-            public class CreateAnnotation extends AbstractIrBlackBoxCodegenTest {
+            public class CreateAnnotation {
                 @Test
                 public void testAllFilesPresentInCreateAnnotation() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/createAnnotation"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -31955,7 +31955,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/enclosing")
             @TestDataPath("$PROJECT_ROOT")
-            public class Enclosing extends AbstractIrBlackBoxCodegenTest {
+            public class Enclosing {
                 @Test
                 public void testAllFilesPresentInEnclosing() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/enclosing"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32115,7 +32115,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/functions")
             @TestDataPath("$PROJECT_ROOT")
-            public class Functions extends AbstractIrBlackBoxCodegenTest {
+            public class Functions {
                 @Test
                 public void testAllFilesPresentInFunctions() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/functions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32203,7 +32203,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/genericSignature")
             @TestDataPath("$PROJECT_ROOT")
-            public class GenericSignature extends AbstractIrBlackBoxCodegenTest {
+            public class GenericSignature {
                 @Test
                 public void testAllFilesPresentInGenericSignature() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/genericSignature"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32315,7 +32315,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/isInstance")
             @TestDataPath("$PROJECT_ROOT")
-            public class IsInstance extends AbstractIrBlackBoxCodegenTest {
+            public class IsInstance {
                 @Test
                 public void testAllFilesPresentInIsInstance() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/isInstance"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32331,7 +32331,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/kClassInAnnotation")
             @TestDataPath("$PROJECT_ROOT")
-            public class KClassInAnnotation extends AbstractIrBlackBoxCodegenTest {
+            public class KClassInAnnotation {
                 @Test
                 public void testAllFilesPresentInKClassInAnnotation() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/kClassInAnnotation"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32395,7 +32395,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/lambdaClasses")
             @TestDataPath("$PROJECT_ROOT")
-            public class LambdaClasses extends AbstractIrBlackBoxCodegenTest {
+            public class LambdaClasses {
                 @Test
                 public void testAllFilesPresentInLambdaClasses() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/lambdaClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32459,7 +32459,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/mapping")
             @TestDataPath("$PROJECT_ROOT")
-            public class Mapping extends AbstractIrBlackBoxCodegenTest {
+            public class Mapping {
                 @Test
                 public void testAllFilesPresentInMapping() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/mapping"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32570,7 +32570,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/mapping/fakeOverrides")
                 @TestDataPath("$PROJECT_ROOT")
-                public class FakeOverrides extends AbstractIrBlackBoxCodegenTest {
+                public class FakeOverrides {
                     @Test
                     public void testAllFilesPresentInFakeOverrides() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/mapping/fakeOverrides"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32592,7 +32592,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/mapping/inlineClasses")
                 @TestDataPath("$PROJECT_ROOT")
-                public class InlineClasses extends AbstractIrBlackBoxCodegenTest {
+                public class InlineClasses {
                     @Test
                     public void testAllFilesPresentInInlineClasses() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/mapping/inlineClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32614,7 +32614,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/mapping/jvmStatic")
                 @TestDataPath("$PROJECT_ROOT")
-                public class JvmStatic extends AbstractIrBlackBoxCodegenTest {
+                public class JvmStatic {
                     @Test
                     public void testAllFilesPresentInJvmStatic() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/mapping/jvmStatic"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32636,7 +32636,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/mapping/types")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Types extends AbstractIrBlackBoxCodegenTest {
+                public class Types {
                     @Test
                     public void testAllFilesPresentInTypes() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/mapping/types"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32773,7 +32773,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/methodsFromAny")
             @TestDataPath("$PROJECT_ROOT")
-            public class MethodsFromAny extends AbstractIrBlackBoxCodegenTest {
+            public class MethodsFromAny {
                 @Test
                 @TestMetadata("adaptedCallableReferencesNotEqualToCallablesFromAPI.kt")
                 public void testAdaptedCallableReferencesNotEqualToCallablesFromAPI() throws Exception {
@@ -32927,7 +32927,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/modifiers")
             @TestDataPath("$PROJECT_ROOT")
-            public class Modifiers extends AbstractIrBlackBoxCodegenTest {
+            public class Modifiers {
                 @Test
                 public void testAllFilesPresentInModifiers() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/modifiers"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -32991,7 +32991,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/multifileClasses")
             @TestDataPath("$PROJECT_ROOT")
-            public class MultifileClasses extends AbstractIrBlackBoxCodegenTest {
+            public class MultifileClasses {
                 @Test
                 public void testAllFilesPresentInMultifileClasses() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/multifileClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33019,7 +33019,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/noReflectAtRuntime")
             @TestDataPath("$PROJECT_ROOT")
-            public class NoReflectAtRuntime extends AbstractIrBlackBoxCodegenTest {
+            public class NoReflectAtRuntime {
                 @Test
                 public void testAllFilesPresentInNoReflectAtRuntime() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/noReflectAtRuntime"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33070,7 +33070,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/noReflectAtRuntime/methodsFromAny")
                 @TestDataPath("$PROJECT_ROOT")
-                public class MethodsFromAny extends AbstractIrBlackBoxCodegenTest {
+                public class MethodsFromAny {
                     @Test
                     public void testAllFilesPresentInMethodsFromAny() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/noReflectAtRuntime/methodsFromAny"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33099,7 +33099,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/parameters")
             @TestDataPath("$PROJECT_ROOT")
-            public class Parameters extends AbstractIrBlackBoxCodegenTest {
+            public class Parameters {
                 @Test
                 public void testAllFilesPresentInParameters() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/parameters"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33199,7 +33199,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/properties")
             @TestDataPath("$PROJECT_ROOT")
-            public class Properties extends AbstractIrBlackBoxCodegenTest {
+            public class Properties {
                 @Test
                 public void testAllFilesPresentInProperties() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/properties"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33388,7 +33388,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/properties/accessors")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Accessors extends AbstractIrBlackBoxCodegenTest {
+                public class Accessors {
                     @Test
                     @TestMetadata("accessorNames.kt")
                     public void testAccessorNames() throws Exception {
@@ -33428,7 +33428,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/properties/getDelegate")
                 @TestDataPath("$PROJECT_ROOT")
-                public class GetDelegate extends AbstractIrBlackBoxCodegenTest {
+                public class GetDelegate {
                     @Test
                     public void testAllFilesPresentInGetDelegate() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/properties/getDelegate"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33528,7 +33528,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/properties/jvmField")
                 @TestDataPath("$PROJECT_ROOT")
-                public class JvmField extends AbstractIrBlackBoxCodegenTest {
+                public class JvmField {
                     @Test
                     public void testAllFilesPresentInJvmField() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/properties/jvmField"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33556,7 +33556,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/properties/localDelegated")
                 @TestDataPath("$PROJECT_ROOT")
-                public class LocalDelegated extends AbstractIrBlackBoxCodegenTest {
+                public class LocalDelegated {
                     @Test
                     public void testAllFilesPresentInLocalDelegated() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/properties/localDelegated"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33615,7 +33615,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/supertypes")
             @TestDataPath("$PROJECT_ROOT")
-            public class Supertypes extends AbstractIrBlackBoxCodegenTest {
+            public class Supertypes {
                 @Test
                 public void testAllFilesPresentInSupertypes() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/supertypes"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33655,7 +33655,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/typeOf")
             @TestDataPath("$PROJECT_ROOT")
-            public class TypeOf extends AbstractIrBlackBoxCodegenTest {
+            public class TypeOf {
                 @Test
                 public void testAllFilesPresentInTypeOf() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/typeOf"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33694,7 +33694,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/typeOf/js")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Js extends AbstractIrBlackBoxCodegenTest {
+                public class Js {
                     @Test
                     public void testAllFilesPresentInJs() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/typeOf/js"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33704,7 +33704,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/typeOf/noReflect")
                 @TestDataPath("$PROJECT_ROOT")
-                public class NoReflect extends AbstractIrBlackBoxCodegenTest {
+                public class NoReflect {
                     @Test
                     public void testAllFilesPresentInNoReflect() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/typeOf/noReflect"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33731,7 +33731,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                     @Nested
                     @TestMetadata("compiler/testData/codegen/box/reflection/typeOf/noReflect/nonReifiedTypeParameters")
                     @TestDataPath("$PROJECT_ROOT")
-                    public class NonReifiedTypeParameters extends AbstractIrBlackBoxCodegenTest {
+                    public class NonReifiedTypeParameters {
                         @Test
                         public void testAllFilesPresentInNonReifiedTypeParameters() throws Exception {
                             KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/typeOf/noReflect/nonReifiedTypeParameters"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33802,7 +33802,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/typeOf/nonReifiedTypeParameters")
                 @TestDataPath("$PROJECT_ROOT")
-                public class NonReifiedTypeParameters extends AbstractIrBlackBoxCodegenTest {
+                public class NonReifiedTypeParameters {
                     @Test
                     public void testAllFilesPresentInNonReifiedTypeParameters() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/typeOf/nonReifiedTypeParameters"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33885,7 +33885,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/typeParameters")
             @TestDataPath("$PROJECT_ROOT")
-            public class TypeParameters extends AbstractIrBlackBoxCodegenTest {
+            public class TypeParameters {
                 @Test
                 public void testAllFilesPresentInTypeParameters() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/typeParameters"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -33925,7 +33925,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reflection/types")
             @TestDataPath("$PROJECT_ROOT")
-            public class Types extends AbstractIrBlackBoxCodegenTest {
+            public class Types {
                 @Test
                 public void testAllFilesPresentInTypes() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/types"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -34006,7 +34006,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/types/createType")
                 @TestDataPath("$PROJECT_ROOT")
-                public class CreateType extends AbstractIrBlackBoxCodegenTest {
+                public class CreateType {
                     @Test
                     public void testAllFilesPresentInCreateType() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/types/createType"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -34046,7 +34046,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
                 @Nested
                 @TestMetadata("compiler/testData/codegen/box/reflection/types/subtyping")
                 @TestDataPath("$PROJECT_ROOT")
-                public class Subtyping extends AbstractIrBlackBoxCodegenTest {
+                public class Subtyping {
                     @Test
                     public void testAllFilesPresentInSubtyping() throws Exception {
                         KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reflection/types/subtyping"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -34082,7 +34082,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/regressions")
         @TestDataPath("$PROJECT_ROOT")
-        public class Regressions extends AbstractIrBlackBoxCodegenTest {
+        public class Regressions {
             @Test
             public void testAllFilesPresentInRegressions() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/regressions"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -34662,7 +34662,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/reified")
         @TestDataPath("$PROJECT_ROOT")
-        public class Reified extends AbstractIrBlackBoxCodegenTest {
+        public class Reified {
             @Test
             public void testAllFilesPresentInReified() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reified"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -34881,7 +34881,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/reified/arraysReification")
             @TestDataPath("$PROJECT_ROOT")
-            public class ArraysReification extends AbstractIrBlackBoxCodegenTest {
+            public class ArraysReification {
                 @Test
                 public void testAllFilesPresentInArraysReification() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/reified/arraysReification"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -34928,7 +34928,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/safeCall")
         @TestDataPath("$PROJECT_ROOT")
-        public class SafeCall extends AbstractIrBlackBoxCodegenTest {
+        public class SafeCall {
             @Test
             public void testAllFilesPresentInSafeCall() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/safeCall"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -35016,7 +35016,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/sam")
         @TestDataPath("$PROJECT_ROOT")
-        public class Sam extends AbstractIrBlackBoxCodegenTest {
+        public class Sam {
             @Test
             public void testAllFilesPresentInSam() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/sam"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -35151,7 +35151,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/sam/constructors")
             @TestDataPath("$PROJECT_ROOT")
-            public class Constructors extends AbstractIrBlackBoxCodegenTest {
+            public class Constructors {
                 @Test
                 public void testAllFilesPresentInConstructors() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/sam/constructors"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -35251,7 +35251,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/sam/equality")
             @TestDataPath("$PROJECT_ROOT")
-            public class Equality extends AbstractIrBlackBoxCodegenTest {
+            public class Equality {
                 @Test
                 public void testAllFilesPresentInEquality() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/sam/equality"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -35292,7 +35292,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/sealed")
         @TestDataPath("$PROJECT_ROOT")
-        public class Sealed extends AbstractIrBlackBoxCodegenTest {
+        public class Sealed {
             @Test
             public void testAllFilesPresentInSealed() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/sealed"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -35338,7 +35338,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/secondaryConstructors")
         @TestDataPath("$PROJECT_ROOT")
-        public class SecondaryConstructors extends AbstractIrBlackBoxCodegenTest {
+        public class SecondaryConstructors {
             @Test
             @TestMetadata("accessToCompanion.kt")
             public void testAccessToCompanion() throws Exception {
@@ -35558,7 +35558,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/signatureAnnotations")
         @TestDataPath("$PROJECT_ROOT")
-        public class SignatureAnnotations extends AbstractIrBlackBoxCodegenTest {
+        public class SignatureAnnotations {
             @Test
             public void testAllFilesPresentInSignatureAnnotations() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/signatureAnnotations"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -35646,7 +35646,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/smap")
         @TestDataPath("$PROJECT_ROOT")
-        public class Smap extends AbstractIrBlackBoxCodegenTest {
+        public class Smap {
             @Test
             public void testAllFilesPresentInSmap() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/smap"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -35674,7 +35674,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/smartCasts")
         @TestDataPath("$PROJECT_ROOT")
-        public class SmartCasts extends AbstractIrBlackBoxCodegenTest {
+        public class SmartCasts {
             @Test
             public void testAllFilesPresentInSmartCasts() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/smartCasts"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -35786,7 +35786,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/specialBuiltins")
         @TestDataPath("$PROJECT_ROOT")
-        public class SpecialBuiltins extends AbstractIrBlackBoxCodegenTest {
+        public class SpecialBuiltins {
             @Test
             public void testAllFilesPresentInSpecialBuiltins() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/specialBuiltins"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -35958,7 +35958,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/statics")
         @TestDataPath("$PROJECT_ROOT")
-        public class Statics extends AbstractIrBlackBoxCodegenTest {
+        public class Statics {
             @Test
             public void testAllFilesPresentInStatics() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/statics"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36070,7 +36070,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/storeStackBeforeInline")
         @TestDataPath("$PROJECT_ROOT")
-        public class StoreStackBeforeInline extends AbstractIrBlackBoxCodegenTest {
+        public class StoreStackBeforeInline {
             @Test
             public void testAllFilesPresentInStoreStackBeforeInline() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/storeStackBeforeInline"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36110,7 +36110,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/strings")
         @TestDataPath("$PROJECT_ROOT")
-        public class Strings extends AbstractIrBlackBoxCodegenTest {
+        public class Strings {
             @Test
             public void testAllFilesPresentInStrings() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/strings"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36276,7 +36276,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/super")
         @TestDataPath("$PROJECT_ROOT")
-        public class Super extends AbstractIrBlackBoxCodegenTest {
+        public class Super {
             @Test
             public void testAllFilesPresentInSuper() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/super"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36465,7 +36465,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/super/superConstructor")
             @TestDataPath("$PROJECT_ROOT")
-            public class SuperConstructor extends AbstractIrBlackBoxCodegenTest {
+            public class SuperConstructor {
                 @Test
                 public void testAllFilesPresentInSuperConstructor() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/super/superConstructor"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36518,7 +36518,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/synchronized")
         @TestDataPath("$PROJECT_ROOT")
-        public class Synchronized extends AbstractIrBlackBoxCodegenTest {
+        public class Synchronized {
             @Test
             public void testAllFilesPresentInSynchronized() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/synchronized"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36594,7 +36594,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/syntheticAccessors")
         @TestDataPath("$PROJECT_ROOT")
-        public class SyntheticAccessors extends AbstractIrBlackBoxCodegenTest {
+        public class SyntheticAccessors {
             @Test
             @TestMetadata("accessorForAbstractProtected.kt")
             public void testAccessorForAbstractProtected() throws Exception {
@@ -36724,7 +36724,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/throws")
         @TestDataPath("$PROJECT_ROOT")
-        public class Throws extends AbstractIrBlackBoxCodegenTest {
+        public class Throws {
             @Test
             public void testAllFilesPresentInThrows() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/throws"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36746,7 +36746,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/toArray")
         @TestDataPath("$PROJECT_ROOT")
-        public class ToArray extends AbstractIrBlackBoxCodegenTest {
+        public class ToArray {
             @Test
             public void testAllFilesPresentInToArray() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/toArray"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36810,7 +36810,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/topLevelPrivate")
         @TestDataPath("$PROJECT_ROOT")
-        public class TopLevelPrivate extends AbstractIrBlackBoxCodegenTest {
+        public class TopLevelPrivate {
             @Test
             public void testAllFilesPresentInTopLevelPrivate() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/topLevelPrivate"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36856,7 +36856,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/trailingComma")
         @TestDataPath("$PROJECT_ROOT")
-        public class TrailingComma extends AbstractIrBlackBoxCodegenTest {
+        public class TrailingComma {
             @Test
             public void testAllFilesPresentInTrailingComma() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/trailingComma"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -36872,7 +36872,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/traits")
         @TestDataPath("$PROJECT_ROOT")
-        public class Traits extends AbstractIrBlackBoxCodegenTest {
+        public class Traits {
             @Test
             @TestMetadata("abstractClassInheritsFromInterface.kt")
             public void testAbstractClassInheritsFromInterface() throws Exception {
@@ -37110,7 +37110,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/typeInfo")
         @TestDataPath("$PROJECT_ROOT")
-        public class TypeInfo extends AbstractIrBlackBoxCodegenTest {
+        public class TypeInfo {
             @Test
             public void testAllFilesPresentInTypeInfo() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/typeInfo"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -37162,7 +37162,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/typeMapping")
         @TestDataPath("$PROJECT_ROOT")
-        public class TypeMapping extends AbstractIrBlackBoxCodegenTest {
+        public class TypeMapping {
             @Test
             public void testAllFilesPresentInTypeMapping() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/typeMapping"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -37244,7 +37244,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/typealias")
         @TestDataPath("$PROJECT_ROOT")
-        public class Typealias extends AbstractIrBlackBoxCodegenTest {
+        public class Typealias {
             @Test
             public void testAllFilesPresentInTypealias() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/typealias"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -37368,7 +37368,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/unaryOp")
         @TestDataPath("$PROJECT_ROOT")
-        public class UnaryOp extends AbstractIrBlackBoxCodegenTest {
+        public class UnaryOp {
             @Test
             public void testAllFilesPresentInUnaryOp() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/unaryOp"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -37414,7 +37414,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/unit")
         @TestDataPath("$PROJECT_ROOT")
-        public class Unit extends AbstractIrBlackBoxCodegenTest {
+        public class Unit {
             @Test
             public void testAllFilesPresentInUnit() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/unit"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -37490,7 +37490,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/unsignedTypes")
         @TestDataPath("$PROJECT_ROOT")
-        public class UnsignedTypes extends AbstractIrBlackBoxCodegenTest {
+        public class UnsignedTypes {
             @Test
             public void testAllFilesPresentInUnsignedTypes() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/unsignedTypes"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -37757,7 +37757,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/unsignedTypes/jvm8Intrinsics")
             @TestDataPath("$PROJECT_ROOT")
-            public class Jvm8Intrinsics extends AbstractIrBlackBoxCodegenTest {
+            public class Jvm8Intrinsics {
                 @Test
                 public void testAllFilesPresentInJvm8Intrinsics() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/unsignedTypes/jvm8Intrinsics"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -37816,7 +37816,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/valueClasses")
         @TestDataPath("$PROJECT_ROOT")
-        public class ValueClasses extends AbstractIrBlackBoxCodegenTest {
+        public class ValueClasses {
             @Test
             public void testAllFilesPresentInValueClasses() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/valueClasses"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -37832,7 +37832,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/vararg")
         @TestDataPath("$PROJECT_ROOT")
-        public class Vararg extends AbstractIrBlackBoxCodegenTest {
+        public class Vararg {
             @Test
             public void testAllFilesPresentInVararg() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/vararg"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -37944,7 +37944,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
         @Nested
         @TestMetadata("compiler/testData/codegen/box/when")
         @TestDataPath("$PROJECT_ROOT")
-        public class When extends AbstractIrBlackBoxCodegenTest {
+        public class When {
             @Test
             public void testAllFilesPresentInWhen() throws Exception {
                 KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/when"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -38205,7 +38205,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/when/enumOptimization")
             @TestDataPath("$PROJECT_ROOT")
-            public class EnumOptimization extends AbstractIrBlackBoxCodegenTest {
+            public class EnumOptimization {
                 @Test
                 public void testAllFilesPresentInEnumOptimization() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/when/enumOptimization"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -38323,7 +38323,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/when/stringOptimization")
             @TestDataPath("$PROJECT_ROOT")
-            public class StringOptimization extends AbstractIrBlackBoxCodegenTest {
+            public class StringOptimization {
                 @Test
                 public void testAllFilesPresentInStringOptimization() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/when/stringOptimization"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
@@ -38387,7 +38387,7 @@ public class IrBlackBoxCodegenTestGenerated extends AbstractIrBlackBoxCodegenTes
             @Nested
             @TestMetadata("compiler/testData/codegen/box/when/whenSubjectVariable")
             @TestDataPath("$PROJECT_ROOT")
-            public class WhenSubjectVariable extends AbstractIrBlackBoxCodegenTest {
+            public class WhenSubjectVariable {
                 @Test
                 public void testAllFilesPresentInWhenSubjectVariable() throws Exception {
                     KtTestUtil.assertAllTestsPresentByMetadataWithExcluded(this.getClass(), new File("compiler/testData/codegen/box/when/whenSubjectVariable"), Pattern.compile("^(.+)\\.kt$"), null, TargetBackend.JVM_IR, true);
