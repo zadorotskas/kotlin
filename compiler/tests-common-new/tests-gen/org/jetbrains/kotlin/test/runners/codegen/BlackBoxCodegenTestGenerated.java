@@ -18398,6 +18398,12 @@ public class BlackBoxCodegenTestGenerated extends AbstractBlackBoxCodegenTest {
             }
 
             @Test
+            @TestMetadata("bigArityFun.kt")
+            public void testBigArityFun() throws Exception {
+                runTest("compiler/testData/codegen/box/invokedynamic/lambdas/bigArityFun.kt");
+            }
+
+            @Test
             @TestMetadata("capturedDispatchReceiver.kt")
             public void testCapturedDispatchReceiver() throws Exception {
                 runTest("compiler/testData/codegen/box/invokedynamic/lambdas/capturedDispatchReceiver.kt");
