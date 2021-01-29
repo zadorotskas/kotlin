@@ -3933,6 +3933,12 @@ public class IrBytecodeTextTestGenerated extends AbstractIrBytecodeTextTest {
         }
 
         @Test
+        @TestMetadata("lambdas.kt")
+        public void testLambdas() throws Exception {
+            runTest("compiler/testData/codegen/bytecodeText/invokedynamic/lambdas.kt");
+        }
+
+        @Test
         @TestMetadata("streamApi.kt")
         public void testStreamApi() throws Exception {
             runTest("compiler/testData/codegen/bytecodeText/invokedynamic/streamApi.kt");
