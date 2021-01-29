@@ -31,8 +31,8 @@ class FirTestDataConsistencyHandler(testServices: TestServices) : AfterAnalysisC
             runFirTestAndGeneratedTestData(testData, firTestData)
             return
         }
-        val originalFileContent = clearTextFromDiagnosticMarkup(testData.readText())
-        val firFileContent = clearTextFromDiagnosticMarkup(firTestData.readText())
+        val originalFileContent = clearTextFromDiagnosticMarkup(testData.readText().replace("\r\n", "\n").trim())
+        val firFileContent = clearTextFromDiagnosticMarkup(firTestData.readText().replace("\r\n", "\n").trim())
         testServices.assertions.assertEquals(originalFileContent, firFileContent) {
             "Original and fir test data aren't identical. " +
                     "Please, add changes from ${testData.name} to ${firTestData.name}"
